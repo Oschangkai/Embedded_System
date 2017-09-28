@@ -41,11 +41,10 @@
         android:id="@+id/valTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:layout_marginLeft="157dp"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/TV"
-        app:layout_constraintLeft_toRightOf="@+id/eqTV"
-        android:layout_marginLeft="157dp" />
+        app:layout_constraintLeft_toRightOf="@+id/eqTV" />
 
     <Button
         android:id="@+id/incBTN"
