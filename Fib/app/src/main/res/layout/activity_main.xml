@@ -53,6 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="110dp"
+        android:onClick="INC"
         android:text="INC"
         app:layout_constraintLeft_toLeftOf="@+id/TV"
         app:layout_constraintTop_toBottomOf="@+id/TV" />
@@ -61,29 +62,32 @@
         android:id="@+id/decBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DEC"
-        app:layout_constraintLeft_toRightOf="@+id/incBTN"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="110dp"
+        android:onClick="DEC"
+        android:text="DEC"
+        app:layout_constraintLeft_toRightOf="@+id/incBTN"
         app:layout_constraintTop_toBottomOf="@+id/iTV" />
 
     <Button
         android:id="@+id/compBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="COMP"
-        app:layout_constraintLeft_toRightOf="@+id/decBTN"
         android:layout_marginLeft="38dp"
         android:layout_marginTop="110dp"
+        android:onClick="COMP"
+        android:text="COMP"
+        app:layout_constraintLeft_toRightOf="@+id/decBTN"
         app:layout_constraintTop_toBottomOf="@+id/eqTV" />
 
     <Button
         android:id="@+id/resBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RESET"
-        app:layout_constraintLeft_toRightOf="@+id/compBTN"
         android:layout_marginLeft="39dp"
         android:layout_marginTop="110dp"
+        android:onClick="RES"
+        android:text="RESET"
+        app:layout_constraintLeft_toRightOf="@+id/compBTN"
         app:layout_constraintTop_toBottomOf="@+id/valTV" />
 </android.support.constraint.ConstraintLayout>
