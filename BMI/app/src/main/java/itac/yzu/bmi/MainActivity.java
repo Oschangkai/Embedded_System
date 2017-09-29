@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-<<<<<<< HEAD
 
     public void onFocusChanged() {
 
@@ -49,6 +48,4 @@ public class MainActivity extends AppCompatActivity {
         double height = h / 100;
         return weight / height / height;
     }
-=======
->>>>>>> e5bccd2288e05db2f4f7d17dc96f1f8fb2e2153f
 }

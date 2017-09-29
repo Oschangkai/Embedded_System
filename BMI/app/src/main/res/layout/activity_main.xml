@@ -161,8 +161,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-<<<<<<< HEAD
-=======
     <TextView
         android:id="@+id/bmi_resultTV"
         android:layout_width="wrap_content"
@@ -189,5 +187,4 @@
         android:layout_marginTop="30dp"
         app:layout_constraintLeft_toRightOf="@+id/suggestionLBL"
         app:layout_constraintTop_toBottomOf="@+id/ideal_weight_resultTV" />
->>>>>>> e5bccd2288e05db2f4f7d17dc96f1f8fb2e2153f
 </android.support.constraint.ConstraintLayout>
