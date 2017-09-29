@@ -85,6 +85,31 @@
         tools:layout_editor_absoluteX="114dp"
         tools:layout_editor_absoluteY="190dp" />
 
+    <TextView
+        android:id="@+id/bmi_resultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="229dp" />
+
+    <TextView
+        android:id="@+id/suggestionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <TextView
+        android:id="@+id/ideal_weight_resultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="267dp" />
+
     <EditText
         android:id="@+id/heightET"
         android:layout_width="120dp"
@@ -128,28 +153,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <TextView
-        android:id="@+id/bmi_resultTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="229dp" />
-
-    <TextView
-        android:id="@+id/ideal_weight_resultTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="267dp" />
-
-    <TextView
-        android:id="@+id/suggestionTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="362dp" />
 </android.support.constraint.ConstraintLayout>
