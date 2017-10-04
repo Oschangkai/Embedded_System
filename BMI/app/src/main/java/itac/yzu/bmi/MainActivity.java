@@ -2,6 +2,9 @@ package itac.yzu.bmi;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -10,17 +13,17 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     // Find Elements on View
-    EditText heightET = (EditText)findViewById(R.id.heightET);
-    EditText weightET = (EditText)findViewById(R.id.weightET);
+    EditText heightET;
+    EditText weightET;
 
-    Button resetBTN = (Button)findViewById(R.id.resetBTN);
-    Button genderBTN = (Button)findViewById(R.id.genderBTN);
+    Button resetBTN;
+    Button genderBTN ;
 
-    TextView bmiTV = (TextView)findViewById(R.id.bmiTV);
-    TextView ideal_weightTV = (TextView)findViewById(R.id.ideal_weight_resultTV);
-    TextView bmi_resultTV = (TextView)findViewById(R.id.bmi_resultTV);
-    TextView ideal_weight_resultTV = (TextView)findViewById(R.id.ideal_weight_resultTV);
-    TextView suggestionTV = (TextView)findViewById(R.id.suggestionTV);
+    TextView bmiTV;
+    TextView ideal_weightTV;
+    TextView bmi_resultTV;
+    TextView ideal_weight_resultTV;
+    TextView suggestionTV;
 
     // Definitions
     double[] bmiLevel = {18.5, 24, 27, 30, 35};
@@ -33,19 +36,141 @@ public class MainActivity extends AppCompatActivity {
             "「重度肥胖」，需要立刻力行健康體重管理喔！"};
     String[] bmiResult = { "體重過輕", "體重正常", "體重過重", "體重肥胖" };
     String[] idealWeightResult = { "為體重正常", "為體重過重或過輕", "以上為肥胖或體重不足" };
-
+    char gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        heightET = (EditText)findViewById(R.id.heightET);
+        weightET = (EditText)findViewById(R.id.weightET);
+
+        resetBTN = (Button)findViewById(R.id.resetBTN);
+        genderBTN = (Button)findViewById(R.id.genderBTN);
+
+        bmiTV = (TextView)findViewById(R.id.bmiTV);
+        ideal_weightTV = (TextView)findViewById(R.id.ideal_weightTV);
+        bmi_resultTV = (TextView)findViewById(R.id.bmi_resultTV);
+        ideal_weight_resultTV = (TextView)findViewById(R.id.ideal_weight_resultTV);
+        suggestionTV = (TextView)findViewById(R.id.suggestionTV);
+        gender = 'm';
+
+        heightET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!heightET.getText().toString().equals("")  && !weightET.getText().toString().equals("")) {
+                    double height = Double.parseDouble(heightET.getText().toString());
+                    double weight = Double.parseDouble(weightET.getText().toString());
+                    double BMI = calculateBMI(height, weight);
+                    bmiTV.setText(String.format("%.1f", BMI));
+                    calculateIdeal(height, weight, gender);
+                    BMIText(BMI);
+                }
+            }
+        });
+
+        weightET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!heightET.getText().toString().equals("")  && !weightET.getText().toString().equals("")) {
+                    double height = Double.parseDouble(heightET.getText().toString());
+                    double weight = Double.parseDouble(weightET.getText().toString());
+                    double BMI = calculateBMI(height, weight);
+                    bmiTV.setText(String.format("%.1f", BMI));
+                    calculateIdeal(height, weight, gender);
+                    BMIText(BMI);
+                }
+            }
+        });
     }
 
-    public void onFocusChanged() {
-
+    // Change the gender
+    public void changeGender(View v) {
+        if(gender == 'm') {
+            gender = 'f';
+            genderBTN.setText("女性");
+        }
+        else {
+            gender = 'm';
+            genderBTN.setText("男性");
+        }
     }
-    public double caculateBMI(double h, double weight) {
+
+    // Reset all TextView
+    public void resetAll(View v) {
+        heightET.setText("");
+        weightET.setText("");
+
+        bmiTV.setText("");
+        ideal_weightTV.setText("");
+        bmi_resultTV.setText("");
+        ideal_weight_resultTV.setText("");
+        suggestionTV.setText("");
+    }
+
+    // Calculate BMI
+    public double calculateBMI(double h, double weight) {
         double height = h / 100;
         return weight / height / height;
     }
+
+    // Calculate ideal weight
+    public void calculateIdeal(double height, double weight, char g) {
+        switch(g) {
+            case 'm':
+                ideal_weightTV.setText(String.format("%.1f", (height - 80) * 0.7));
+                break;
+            case 'f':
+                ideal_weightTV.setText(String.format("%.1f", (height - 70) * 0.6));
+                break;
+        }
+    }
+
+    public void BMIText(double BMI) {
+        if(BMI < 18.5) {
+            bmi_resultTV.setText(bmiResult[0]);
+            suggestionTV.setText(suggestion[0]);
+        }
+        else if(BMI>=18.5 && BMI < 24 ) {
+            bmi_resultTV.setText(bmiResult[1]);
+            suggestionTV.setText(suggestion[1]);
+        }
+        else if(BMI>=24 && BMI < 27) {
+            bmi_resultTV.setText(bmiResult[2]);
+            suggestionTV.setText(suggestion[2]);
+        }
+        else if(BMI>=27) {
+            bmi_resultTV.setText(bmiResult[3]);
+            if(BMI < 30) {
+                suggestionTV.setText(suggestion[3]);
+            }
+            else if (BMI>=30 && BMI < 35) {
+                suggestionTV.setText(suggestion[4]);
+            }
+            else if(BMI>=35) {
+                suggestionTV.setText(suggestion[5]);
+            }
+        }
+    }
+
 }
