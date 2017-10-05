@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
     // Definitions
     double[] bmiLevel = {18.5, 24, 27, 30, 35};
     String[] suggestion = {
-            "「體重過輕」，需要多運動，均衡飲食，以增加體能，維持健康！",
+            "「體重過輕」，需要多運動，均衡飲食，\n以增加體能，維持健康！",
             "「健康體重」，要繼續保持喔！",
-            "「體重過重」，要小心囉，趕快力行健康體重管理吧！",
-            "「輕度肥胖」，需要立刻力行健康體重管理喔！",
-            "「中度肥胖」，需要立刻力行健康體重管理喔！",
-            "「重度肥胖」，需要立刻力行健康體重管理喔！"};
+            "「體重過重」，要小心囉，\n趕快力行健康體重管理吧！",
+            "「輕度肥胖」，\n需要立刻力行健康體重管理喔！",
+            "「中度肥胖」，\n需要立刻力行健康體重管理喔！",
+            "「重度肥胖」，\n需要立刻力行健康體重管理喔！"};
     String[] bmiResult = { "體重過輕", "體重正常", "體重過重", "體重肥胖" };
-    String[] idealWeightResult = { "為體重正常", "為體重過重或過輕", "以上為肥胖或體重不足" };
+    String[] idealWeightResult = { "體重正常", "體重過重", "肥胖", "體重過輕", "體重不足" };
     char gender;
 
     @Override
@@ -102,6 +102,29 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        genderBTN.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!heightET.getText().toString().equals("")  && !weightET.getText().toString().equals("")) {
+                    double height = Double.parseDouble(heightET.getText().toString());
+                    double weight = Double.parseDouble(weightET.getText().toString());
+                    double BMI = calculateBMI(height, weight);
+                    bmiTV.setText(String.format("%.1f", BMI));
+                    calculateIdeal(height, weight, gender);
+                    BMIText(BMI);
+                }
+            }
+        });
     }
 
     // Change the gender
@@ -139,9 +162,11 @@ public class MainActivity extends AppCompatActivity {
         switch(g) {
             case 'm':
                 ideal_weightTV.setText(String.format("%.1f", (height - 80) * 0.7));
+                IdealText(weight, (height - 80) * 0.7);
                 break;
             case 'f':
                 ideal_weightTV.setText(String.format("%.1f", (height - 70) * 0.6));
+                IdealText(weight, (height - 70) * 0.6);
                 break;
         }
     }
@@ -170,6 +195,26 @@ public class MainActivity extends AppCompatActivity {
             else if(BMI>=35) {
                 suggestionTV.setText(suggestion[5]);
             }
+        }
+    }
+
+    public void IdealText(double w, double iw) {
+        if(w <= iw * 1.1 && w >= iw *0.9) {
+            ideal_weight_resultTV.setText(idealWeightResult[0]);
+        }
+
+        else if(w > iw * 1.1 && w <= iw * 1.2) {
+            ideal_weight_resultTV.setText(idealWeightResult[1]);
+        }
+
+        else if(w > iw * 1.2) {
+            ideal_weight_resultTV.setText(idealWeightResult[2]);
+        }
+        else if(w < iw * 0.9 && w >= iw * 0.8) {
+            ideal_weight_resultTV.setText(idealWeightResult[3]);
+        }
+        else if(w < iw * 0.8) {
+            ideal_weight_resultTV.setText(idealWeightResult[4]);
         }
     }
 
