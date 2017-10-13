@@ -11,8 +11,6 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class MainActivity extends AppCompatActivity {
     // Find Elements in View
     EditText heightET;
@@ -152,18 +150,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    // Change the gender
-    public void changeGender(View v) {
-        if(gender == 'm') {
-            gender = 'f';
-            genderBTN.setText("女性");
-        }
-        else {
-            gender = 'm';
-            genderBTN.setText("男性");
-        }
     }
 
     // Reset all TextView
