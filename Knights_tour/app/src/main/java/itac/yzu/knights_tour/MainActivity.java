@@ -8,13 +8,9 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextView[] textViews = new TextView[64];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         Button contin = (Button)findViewById(R.id.continuousBtn);
         jumpOne.setEnabled(true);
         contin.setEnabled(true);
+        showPosition((begin-30)/8 + 1, (begin-30)%8 + 1);
     }
 
     public void restart(View v) {
@@ -89,10 +86,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+        TextView row = (TextView)findViewById(R.id.rowTV);
+        TextView col = (TextView)findViewById(R.id.colTV);
+
+        row.setText("");
+        col.setText("");
         init();
     }
 
     public void one(View V) {
+        step();
+    }
+
+    public void walkall(View V) {
+        while(next != begin) {
+            step();
+        }
+    }
+
+    public void step() {
         next = nextPosition[current - 30] + 30 - 1;
         if(next == begin) {
             Button jumpOne = (Button)findViewById(R.id.nextBtn);
@@ -106,24 +118,15 @@ public class MainActivity extends AppCompatActivity {
             nextTV.setBackgroundColor(android.graphics.Color.RED);
             current = next;
         }
+        showPosition((next-30)/8 + 1, (next-30)%8 + 1);
     }
 
-    public void walkall(View V) {
-        while(next != begin) {
-            next = nextPosition[current - 30] + 30 - 1;
-            if(next == begin) {
-                Button jumpOne = (Button)findViewById(R.id.nextBtn);
-                Button contin = (Button)findViewById(R.id.continuousBtn);
-                jumpOne.setEnabled(false);
-                contin.setEnabled(false);
-            }
-            else {
-                int nextID = getResources().getIdentifier("textView" + next, "id", getPackageName());
-                TextView nextTV = (TextView) findViewById(nextID);
-                nextTV.setBackgroundColor(android.graphics.Color.RED);
-                current = next;
-            }
-        }
+    public void showPosition(int x, int y) {
+        TextView row = (TextView)findViewById(R.id.rowTV);
+        TextView col = (TextView)findViewById(R.id.colTV);
+
+        row.setText(String.valueOf(x));
+        col.setText(String.valueOf(y));
     }
 }
 
