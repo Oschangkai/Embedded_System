@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itac.yzu.bmi.MainActivity">
+
+    <TextView
+        android:id="@+id/heightLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="身高："
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:id="@+id/weightLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="體重："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="41dp"
+        app:layout_constraintTop_toBottomOf="@+id/heightLBL" />
+
+    <TextView
+        android:id="@+id/bmiLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="BMI："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="77dp"
+        app:layout_constraintTop_toBottomOf="@+id/weightLBL" />
+
+    <TextView
+        android:id="@+id/ideal_weightLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="理想體重："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/bmiLBL" />
+
+    <TextView
+        android:id="@+id/bmi_resultLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="BMI 評估結果："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/ideal_weightLBL" />
+
+    <TextView
+        android:id="@+id/ideal_weight_resultLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="理想體重評估結果："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_resultLBL" />
+
+    <TextView
+        android:id="@+id/suggestionLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="建議："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/ideal_weight_resultLBL" />
+
+    <TextView
+        android:id="@+id/bmiTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="121dp"
+        app:layout_constraintLeft_toRightOf="@+id/bmiLBL"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bmiLBL" />
+
+    <TextView
+        android:id="@+id/ideal_weightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        app:layout_constraintLeft_toRightOf="@+id/ideal_weightLBL"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ideal_weightLBL" />
+
+    <EditText
+        android:id="@+id/heightET"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/heightLBL"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/weightET"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/weightLBL"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/resetBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="167dp"
+        android:layout_marginRight="16dp"
+        android:onClick="resetAll"
+        android:text="重置系統"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/bmi_resultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="61dp"
+        app:layout_constraintLeft_toRightOf="@+id/bmi_resultLBL"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bmi_resultLBL" />
+
+    <TextView
+        android:id="@+id/ideal_weight_resultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        app:layout_constraintLeft_toRightOf="@+id/ideal_weight_resultLBL"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ideal_weight_resultLBL" />
+
+    <TextView
+        android:id="@+id/suggestionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="118dp"
+        app:layout_constraintLeft_toRightOf="@+id/suggestionLBL"
+        app:layout_constraintBaseline_toBaselineOf="@+id/suggestionLBL" />
+
+    <RadioGroup
+        android:id="@+id/genderRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@+id/maleRadioBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/maleRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="男性" />
+
+        <RadioButton
+            android:id="@+id/femaleRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="女性" />
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>
