@@ -9,6 +9,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import java.util.Random;
+import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -99,9 +100,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void walkall(View V) {
-        while(next != begin) {
-            step();
-        }
+        final Handler h = new Handler();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                Button jumpOne = (Button)findViewById(R.id.nextBtn);
+                Button contin = (Button)findViewById(R.id.continuousBtn);
+                Button restart = (Button)findViewById(R.id.restartBtn);
+                jumpOne.setEnabled(false);
+                contin.setEnabled(false);
+                restart.setEnabled(false);
+                if(next != begin) {
+                    step();
+                    h.postDelayed(this, 1000);
+                } else {
+                    restart.setEnabled(true);
+                }
+            }
+        };
+        r.run();
     }
 
     public void step() {
