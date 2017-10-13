@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         weightET = (EditText)findViewById(R.id.weightET);
 
         resetBTN = (Button)findViewById(R.id.resetBTN);
-        genderBTN = (Button)findViewById(R.id.genderBTN);
 
         bmiTV = (TextView)findViewById(R.id.bmiTV);
         ideal_weightTV = (TextView)findViewById(R.id.ideal_weightTV);
@@ -111,29 +110,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        genderBTN.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if(isOkToShowText()) {
-                    double height = Double.parseDouble(heightET.getText().toString());
-                    double weight = Double.parseDouble(weightET.getText().toString());
-                    double BMI = calculateBMI(height, weight);
-                    bmiTV.setText(String.format("%.1f", BMI));
-                    calculateIdeal(height, weight, gender);
-                    BMIText(BMI);
-                } else resetSuggestion();
-            }
-        });
 
         genderRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -147,6 +123,14 @@ public class MainActivity extends AppCompatActivity {
                         gender = 'f';
                         break;
                 }
+                if(isOkToShowText()) {
+                    double height = Double.parseDouble(heightET.getText().toString());
+                    double weight = Double.parseDouble(weightET.getText().toString());
+                    double BMI = calculateBMI(height, weight);
+                    bmiTV.setText(String.format("%.1f", BMI));
+                    calculateIdeal(height, weight, gender);
+                    BMIText(BMI);
+                } else resetSuggestion();
             }
         });
 
