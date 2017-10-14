@@ -1,4 +1,4 @@
-package itac.yzu.bmi;
+package itac.yzu.bmi2;
 
 import org.junit.Test;
 

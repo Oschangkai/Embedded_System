@@ -1,4 +1,4 @@
-package itac.yzu.bmi;
+package itac.yzu.bmi2;
 
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     EditText weightET;
 
     Button resetBTN;
-    Button genderBTN ;
 
     TextView bmiTV;
     TextView ideal_weightTV;

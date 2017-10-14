@@ -1,4 +1,4 @@
-package itac.yzu.bmi;
+package itac.yzu.bmi2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
