@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
             bmi_resultTV.setText(bmiResult[2]);
             suggestionTV.setText(suggestion[2]);
         }
-        else if(BMI >= bmiLevel[3]) {
+        else if(BMI >= bmiLevel[2]) {
             bmi_resultTV.setText(bmiResult[3]);
             if(BMI < bmiLevel[3]) {
                 suggestionTV.setText(suggestion[3]);
