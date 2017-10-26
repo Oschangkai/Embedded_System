@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="16dp"
+        android:onClick="gotoMainPage"
         android:text="輸入資料"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="45dp"
         android:layout_marginTop="16dp"
+        android:onClick="gotoIdealWeight"
         android:text="理想體重"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,9 +44,10 @@
         android:id="@+id/exitBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="離開"
-        app:layout_constraintLeft_toLeftOf="@+id/idealWeightBTN"
         android:layout_marginLeft="-196dp"
         android:layout_marginTop="-280dp"
+        android:onClick="exit"
+        android:text="離開"
+        app:layout_constraintLeft_toLeftOf="@+id/idealWeightBTN"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 </android.support.constraint.ConstraintLayout>

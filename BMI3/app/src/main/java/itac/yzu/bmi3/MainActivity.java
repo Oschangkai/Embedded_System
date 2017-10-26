@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup genderRadioGroup;
 
     Intent idealWeightIntent = new Intent();
-    //Intent aboutUsIntent = new Intent(this, AboutUsActivity.class);
+    Intent aboutUsIntent = new Intent();
 
     // Definitions
     double[] bmiLevel = {18.5, 24, 27, 30, 35};
@@ -109,6 +109,10 @@ public class MainActivity extends AppCompatActivity {
             BMIText(BMI);
             startActivity(idealWeightIntent);
         } else resetSuggestion();
+    }
+    public void gotoAboutUs(View v) {
+        aboutUsIntent.setClass(MainActivity.this, AboutUsActivity.class);
+        startActivity(aboutUsIntent);
     }
 
     // Calculate BMI

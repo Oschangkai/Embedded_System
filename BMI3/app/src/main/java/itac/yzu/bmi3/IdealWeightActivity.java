@@ -3,6 +3,7 @@ package itac.yzu.bmi3;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class IdealWeightActivity extends AppCompatActivity {
@@ -13,12 +14,12 @@ public class IdealWeightActivity extends AppCompatActivity {
     TextView ideal_weight_resultTV;
     TextView suggestionTV;
 
-    Intent i = this.getIntent();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idealweight);
+
+        Intent i = this.getIntent();
 
         bmiTV = (TextView)findViewById(R.id.bmiTV);
         ideal_weightTV = (TextView)findViewById(R.id.ideal_weightTV);
@@ -33,5 +34,18 @@ public class IdealWeightActivity extends AppCompatActivity {
         suggestionTV.setText(i.getStringExtra("suggestion"));
 
     }
+
+    // Buttons
+    public void gotoMainPage(View v) {
+        Intent MainIntent = new Intent();
+        MainIntent.setClass(IdealWeightActivity.this, MainActivity.class);
+        startActivity(MainIntent);
+    }
+    public void gotoAboutUs(View v) {
+        Intent aboutUsIntent = new Intent();
+        aboutUsIntent.setClass(IdealWeightActivity.this, AboutUsActivity.class);
+        startActivity(aboutUsIntent);
+    }
+
 
 }
