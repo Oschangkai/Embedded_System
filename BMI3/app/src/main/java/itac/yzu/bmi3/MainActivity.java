@@ -1,17 +1,15 @@
 package itac.yzu.bmi3;
 
+import android.content.Intent;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
-import itac.yzu.bmi2.R;
+
 
 public class MainActivity extends AppCompatActivity {
     // Find Elements in View
@@ -20,13 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
     Button resetBTN;
 
-    TextView bmiTV;
-    TextView ideal_weightTV;
-    TextView bmi_resultTV;
-    TextView ideal_weight_resultTV;
-    TextView suggestionTV;
-
     RadioGroup genderRadioGroup;
+
+    Intent idealWeightIntent = new Intent();
+    //Intent aboutUsIntent = new Intent(this, AboutUsActivity.class);
 
     // Definitions
     double[] bmiLevel = {18.5, 24, 27, 30, 35};
@@ -51,12 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
         resetBTN = (Button)findViewById(R.id.resetBTN);
 
-        bmiTV = (TextView)findViewById(R.id.bmiTV);
-        ideal_weightTV = (TextView)findViewById(R.id.ideal_weightTV);
-        bmi_resultTV = (TextView)findViewById(R.id.bmi_resultTV);
-        ideal_weight_resultTV = (TextView)findViewById(R.id.ideal_weight_resultTV);
-        suggestionTV = (TextView)findViewById(R.id.suggestionTV);
-
         genderRadioGroup = (RadioGroup)findViewById(R.id.genderRadioGroup);
 
         gender = 'm';
@@ -64,53 +53,6 @@ public class MainActivity extends AppCompatActivity {
         // Set Default Value
         View view = findViewById(android.R.id.content);
         resetAll(view);
-
-        heightET.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if(isOkToShowText()) {
-                    double height = Double.parseDouble(heightET.getText().toString());
-                    double weight = Double.parseDouble(weightET.getText().toString());
-                    double BMI = calculateBMI(height, weight);
-                    bmiTV.setText(String.format("%.1f", BMI));
-                    calculateIdeal(height, weight, gender);
-                    BMIText(BMI);
-                } else resetSuggestion();
-            }
-        });
-
-        weightET.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if(isOkToShowText()) {
-                    double height = Double.parseDouble(heightET.getText().toString());
-                    double weight = Double.parseDouble(weightET.getText().toString());
-                    double BMI = calculateBMI(height, weight);
-                    bmiTV.setText(String.format("%.1f", BMI));
-                    calculateIdeal(height, weight, gender);
-                    BMIText(BMI);
-                } else resetSuggestion();
-            }
-
-        });
 
         genderRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -124,14 +66,6 @@ public class MainActivity extends AppCompatActivity {
                         gender = 'f';
                         break;
                 }
-                if(isOkToShowText()) {
-                    double height = Double.parseDouble(heightET.getText().toString());
-                    double weight = Double.parseDouble(weightET.getText().toString());
-                    double BMI = calculateBMI(height, weight);
-                    bmiTV.setText(String.format("%.1f", BMI));
-                    calculateIdeal(height, weight, gender);
-                    BMIText(BMI);
-                } else resetSuggestion();
             }
         });
 
@@ -141,21 +75,17 @@ public class MainActivity extends AppCompatActivity {
     public void resetAll(View v) {
         heightET.setText("0");
         weightET.setText("0");
-
-        bmiTV.setText("");
-        ideal_weightTV.setText("");
-        bmi_resultTV.setText("");
-        ideal_weight_resultTV.setText("");
-        suggestionTV.setText("");
     }
 
     public void resetSuggestion() {
-        bmiTV.setText("");
-        ideal_weightTV.setText("");
-        bmi_resultTV.setText("");
-        ideal_weight_resultTV.setText("");
-        suggestionTV.setText("");
+        idealWeightIntent.putExtra("bmi", "");
+        idealWeightIntent.putExtra("ideal_weight", "");
+        idealWeightIntent.putExtra("bmi_result", "");
+        idealWeightIntent.putExtra("ideal_weight_result", "");
+        idealWeightIntent.putExtra("suggestion", "");
     }
+
+
     public boolean isOkToShowText() {
         if(heightET.getText().toString().equals(""))
             return false;
@@ -166,6 +96,19 @@ public class MainActivity extends AppCompatActivity {
         if(weightET.getText().toString().equals("0"))
             return false;
         return true;
+    }
+    // Buttons
+    public void gotoIdealWeightIntent(View v) {
+        if(isOkToShowText()) {
+            idealWeightIntent.setClass(MainActivity.this, IdealWeightActivity.class);
+            double height = Double.parseDouble(heightET.getText().toString());
+            double weight = Double.parseDouble(weightET.getText().toString());
+            double BMI = calculateBMI(height, weight);
+            idealWeightIntent.putExtra("bmi", String.valueOf(BMI));
+            calculateIdeal(height, weight, gender);
+            BMIText(BMI);
+            startActivity(idealWeightIntent);
+        } else resetSuggestion();
     }
 
     // Calculate BMI
@@ -178,11 +121,11 @@ public class MainActivity extends AppCompatActivity {
     public void calculateIdeal(double height, double weight, char g) {
         switch(g) {
             case 'm':
-                ideal_weightTV.setText(String.format("%.1f", (height - 80) * 0.7));
+                idealWeightIntent.putExtra("ideal_weight", String.format("%.1f", (height - 80) * 0.7));
                 IdealText(weight, (height - 80) * 0.7);
                 break;
             case 'f':
-                ideal_weightTV.setText(String.format("%.1f", (height - 70) * 0.6));
+                idealWeightIntent.putExtra("ideal_weight", String.format("%.1f", (height - 70) * 0.6));
                 IdealText(weight, (height - 70) * 0.6);
                 break;
         }
@@ -190,48 +133,48 @@ public class MainActivity extends AppCompatActivity {
 
     public void BMIText(double BMI) {
         if(BMI < bmiLevel[0]) {
-            bmi_resultTV.setText(bmiResult[0]);
-            suggestionTV.setText(suggestion[0]);
+            idealWeightIntent.putExtra("bmi_result", bmiResult[0]);
+            idealWeightIntent.putExtra("suggestion", suggestion[0]);
         }
         else if(BMI >= bmiLevel[0] && BMI < bmiLevel[1] ) {
-            bmi_resultTV.setText(bmiResult[1]);
-            suggestionTV.setText(suggestion[1]);
+            idealWeightIntent.putExtra("bmi_result", bmiResult[1]);
+            idealWeightIntent.putExtra("suggestion", suggestion[1]);
         }
         else if(BMI >= bmiLevel[1] && BMI < bmiLevel[2]) {
-            bmi_resultTV.setText(bmiResult[2]);
-            suggestionTV.setText(suggestion[2]);
+            idealWeightIntent.putExtra("bmi_result", bmiResult[2]);
+            idealWeightIntent.putExtra("suggestion", suggestion[2]);
         }
         else if(BMI >= bmiLevel[2]) {
-            bmi_resultTV.setText(bmiResult[3]);
+            idealWeightIntent.putExtra("bmi_result", bmiResult[3]);
             if(BMI < bmiLevel[3]) {
-                suggestionTV.setText(suggestion[3]);
+                idealWeightIntent.putExtra("suggestion", suggestion[3]);
             }
             else if (BMI >= bmiLevel[3] && BMI < bmiLevel[4]) {
-                suggestionTV.setText(suggestion[4]);
+                idealWeightIntent.putExtra("suggestion", suggestion[4]);
             }
             else if(BMI >= bmiLevel[4]) {
-                suggestionTV.setText(suggestion[5]);
+                idealWeightIntent.putExtra("suggestion", suggestion[5]);
             }
         }
     }
 
     public void IdealText(double w, double iw) {
         if(w <= iw * 1.1 && w >= iw *0.9) {
-            ideal_weight_resultTV.setText(idealWeightResult[0]);
+            idealWeightIntent.putExtra("ideal_weight_result", idealWeightResult[0]);
         }
 
         else if(w > iw * 1.1 && w <= iw * 1.2) {
-            ideal_weight_resultTV.setText(idealWeightResult[1]);
+            idealWeightIntent.putExtra("ideal_weight_result", idealWeightResult[1]);
         }
 
         else if(w > iw * 1.2) {
-            ideal_weight_resultTV.setText(idealWeightResult[2]);
+            idealWeightIntent.putExtra("ideal_weight_result", idealWeightResult[2]);
         }
         else if(w < iw * 0.9 && w >= iw * 0.8) {
-            ideal_weight_resultTV.setText(idealWeightResult[3]);
+            idealWeightIntent.putExtra("ideal_weight_result", idealWeightResult[3]);
         }
         else if(w < iw * 0.8) {
-            ideal_weight_resultTV.setText(idealWeightResult[4]);
+            idealWeightIntent.putExtra("ideal_weight_result", idealWeightResult[4]);
         }
     }
 
