@@ -7,10 +7,14 @@ import android.view.View;
 
 
 public class AboutUsActivity extends AppCompatActivity {
+
+    Bundle b;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboutus);
+        b = this.getIntent().getExtras();
     }
     public void gotoMainPage(View v) {
         Intent MainIntent = new Intent();
@@ -20,6 +24,7 @@ public class AboutUsActivity extends AppCompatActivity {
     public void gotoIdealWeight(View v) {
         Intent IdealWeightIntent = new Intent();
         IdealWeightIntent.setClass(AboutUsActivity.this, IdealWeightActivity.class);
+        IdealWeightIntent.putExtras(b);
         startActivity(IdealWeightIntent);
     }
     public void exit(View v) {
