@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             double height = Double.parseDouble(heightET.getText().toString());
             double weight = Double.parseDouble(weightET.getText().toString());
             double BMI = calculateBMI(height, weight);
-            idealWeightIntent.putExtra("bmi", String.valueOf(BMI));
+            idealWeightIntent.putExtra("bmi", String.format("%.1f", BMI));
             calculateIdeal(height, weight, gender);
             BMIText(BMI);
             startActivity(idealWeightIntent);
