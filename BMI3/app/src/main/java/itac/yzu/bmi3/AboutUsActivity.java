@@ -24,7 +24,9 @@ public class AboutUsActivity extends AppCompatActivity {
     public void gotoIdealWeight(View v) {
         Intent IdealWeightIntent = new Intent();
         IdealWeightIntent.setClass(AboutUsActivity.this, IdealWeightActivity.class);
-        IdealWeightIntent.putExtras(b);
+        if(b != null) {
+            IdealWeightIntent.putExtras(b);
+        }
         startActivity(IdealWeightIntent);
     }
     public void exit(View v) {
