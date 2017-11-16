@@ -101,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
         row.setText("");
         col.setText("");
-        finish();
         init();
     }
 
@@ -118,8 +117,9 @@ public class MainActivity extends AppCompatActivity {
                 if(next != begin) {
                     step();
                     h.postDelayed(this, 1000);
-                } else {
-                    //restart.setEnabled(true);
+                }
+                else {
+                    restart.setEnabled(true);
                 }
             }
         };
@@ -186,8 +186,7 @@ public class MainActivity extends AppCompatActivity {
                 current_score--;
                 current_miss++;
                 missTV.setText(String.valueOf(current_miss));
-                //thisTV.setBackgroundColor(Color.YELLOW);
-               // currentTV.setBackgroundColor(Color.YELLOW);
+                thisTV.setBackgroundColor(Color.YELLOW);
             }
         }
         scoreTV.setText(String.valueOf(current_score));
