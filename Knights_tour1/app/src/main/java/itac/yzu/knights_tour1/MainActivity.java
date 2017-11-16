@@ -1,7 +1,9 @@
 package itac.yzu.knights_tour1;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -99,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         row.setText("");
         col.setText("");
+        finish();
         init();
     }
 
@@ -116,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                     step();
                     h.postDelayed(this, 1000);
                 } else {
-                    restart.setEnabled(true);
+                    //restart.setEnabled(true);
                 }
             }
         };
@@ -162,19 +165,29 @@ public class MainActivity extends AppCompatActivity {
 
         int current_score = Integer.parseInt(scoreTV.getText().toString());
         int currentID = getResources().getIdentifier("textView" + current, "id", getPackageName());
+        int thisID = v.getId();
         TextView currentTV = (TextView)findViewById(currentID);
-        ColorDrawable clickedTVColor = (ColorDrawable) v.getBackground();
+        TextView thisTV = (TextView)findViewById(thisID);
+        int colorID =  ((ColorDrawable) v.getBackground()).getColor();
         if(v.getId() == currentID) {
             current_score+=5;
-            if(clickedTVColor.getColor() == Color.YELLOW)
+            if(colorID == Color.YELLOW)
                 current_score++;
+            TextView hitTV = (TextView)findViewById(R.id.hitTV);
+            int current_hit = Integer.parseInt(hitTV.getText().toString());
+            current_hit = current_hit + 1;
+            hitTV.setText(String.valueOf(current_hit));
             currentTV.setBackgroundColor(Color.GREEN);
         }
         else if(v.getId() != currentID) {
-            if(clickedTVColor.getColor() != Color.YELLOW) {
-                if(current_score > 0)
-                    current_score--;
-                currentTV.setBackgroundColor(Color.YELLOW);
+            TextView missTV = (TextView)findViewById(R.id.missTV);
+            int current_miss = Integer.parseInt(missTV.getText().toString());
+            if(colorID != Color.GREEN) {
+                current_score--;
+                current_miss++;
+                missTV.setText(String.valueOf(current_miss));
+                //thisTV.setBackgroundColor(Color.YELLOW);
+               // currentTV.setBackgroundColor(Color.YELLOW);
             }
         }
         scoreTV.setText(String.valueOf(current_score));
