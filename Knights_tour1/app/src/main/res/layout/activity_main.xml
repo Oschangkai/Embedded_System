@@ -516,6 +516,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
+        android:onClick="goToHelpPage"
         android:text="Help"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -557,9 +558,10 @@
     <TextView
         android:id="@+id/scoreTV"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:text="0"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/scoreLBL"
         app:layout_constraintStart_toEndOf="@+id/scoreLBL" />
@@ -600,22 +602,22 @@
         android:id="@+id/hitTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="51dp"
         android:text="0"
+        android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/hitLBL"
-        app:layout_constraintTop_toBottomOf="@+id/scoreTV" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/hitLBL"
+        app:layout_constraintStart_toEndOf="@+id/hitLBL" />
 
     <TextView
         android:id="@+id/missTV"
         android:layout_width="wrap_content"
-        android:layout_height="29dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
         android:text="0"
+        android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/missLBL"
-        app:layout_constraintTop_toBottomOf="@+id/hitTV" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/missLBL"
+        app:layout_constraintStart_toEndOf="@+id/missLBL" />
 
 </android.support.constraint.ConstraintLayout>

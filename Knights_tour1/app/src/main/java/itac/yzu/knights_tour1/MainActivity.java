@@ -6,14 +6,18 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.content.Intent;
 
 import java.util.Random;
 import android.os.Handler;
+
+import org.w3c.dom.Text;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,26 +33,30 @@ public class MainActivity extends AppCompatActivity {
             TableRow tr = (TableRow)tb.getChildAt(i);
             for(int j = 0; j < 8; j++) {
                 TextView tv = (TextView)tr.getChildAt(j);
+                if(i%2 == 0) {
+                    if(j%2 == 0)
+                        tv.setBackgroundColor(Color.DKGRAY);
+                } else {
+                    if(j%2 == 1)
+                        tv.setBackgroundColor(Color.DKGRAY);
+                }
                 tv.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         clickTV(v);
                     }
                 });
-                if(i%2 == 0) {
-                    if(j%2 == 0)
-                        tv.setBackgroundResource(android.R.color.darker_gray);
-                } else {
-                    if(j%2 == 1)
-                        tv.setBackgroundResource(android.R.color.darker_gray);
-                }
             }
         }
         init();
     }
+
+    boolean isNewGame = false;
+    boolean hasRunnable = false;
     int begin;
     int current;
     int next;
+    int last;
     int[] nextPosition = {11, 12, 9, 19, 20, 21, 13, 23,
                         26, 4, 5, 6, 3, 8, 32, 22,
                         2, 1, 29, 30, 15, 7, 40, 14,
@@ -57,6 +65,27 @@ public class MainActivity extends AppCompatActivity {
                         58, 25, 37, 38, 28, 31, 64, 63,
                         34, 33, 57, 62, 59, 60, 61, 39,
                         42, 52, 49, 50, 51, 56, 53, 54};
+
+    final Handler h = new Handler();
+    final Runnable r = new Runnable() {
+        @Override
+        public void run() {
+            if(next != begin) {
+                step();
+                h.postDelayed(this, 1000);
+            }
+            else {
+                next = nextPosition[current - 30] + 30 - 1;
+                int nextID = getResources().getIdentifier("textView" + next, "id", getPackageName());
+                int currentID = getResources().getIdentifier("textView" + current, "id", getPackageName());
+                TextView currentTV = (TextView)findViewById(currentID);
+                TextView nextTV = (TextView) findViewById(nextID);
+                currentTV.setText("");
+                nextTV.setText("@");
+                h.removeCallbacks(r);
+            }
+        }
+    };
 
 
     public void init() {
@@ -69,6 +98,12 @@ public class MainActivity extends AppCompatActivity {
         start.setText("@");
         Button jumpOne = (Button)findViewById(R.id.helpBtn);
         jumpOne.setEnabled(true);
+        TextView scoreTV = (TextView)findViewById(R.id.scoreTV);
+        TextView hitTV = (TextView)findViewById(R.id.hitTV);
+        TextView missTV = (TextView)findViewById(R.id.missTV);
+        scoreTV.setText("0");
+        hitTV.setText("0");
+        missTV.setText("0");
         walkall();
     }
 
@@ -85,14 +120,14 @@ public class MainActivity extends AppCompatActivity {
                 TextView tv = (TextView)tr.getChildAt(j);
                 if(i%2 == 0) {
                     if(j%2 == 0)
-                        tv.setBackgroundResource(android.R.color.darker_gray);
+                        tv.setBackgroundColor(Color.DKGRAY);
                     else
-                        tv.setBackgroundResource(android.R.color.white);
+                        tv.setBackgroundColor(Color.WHITE);
                 } else {
                     if(j%2 == 1)
-                        tv.setBackgroundResource(android.R.color.darker_gray);
+                        tv.setBackgroundColor(Color.DKGRAY);
                     else
-                        tv.setBackgroundResource(android.R.color.white);
+                        tv.setBackgroundColor(Color.WHITE);
                 }
             }
         }
@@ -101,49 +136,19 @@ public class MainActivity extends AppCompatActivity {
 
         row.setText("");
         col.setText("");
+        if(hasRunnable)
+            h.removeCallbacks(r);
         init();
     }
 
 
     public void walkall() {
-        final Handler h = new Handler();
-        Runnable r = new Runnable() {
-            @Override
-            public void run() {
-                Button jumpOne = (Button)findViewById(R.id.helpBtn);
-                Button restart = (Button)findViewById(R.id.newGameBtn);
-                jumpOne.setEnabled(false);
-                restart.setEnabled(false);
-                if(next != begin) {
-                    step();
-                    h.postDelayed(this, 1000);
-                }
-                else {
-                    restart.setEnabled(true);
-                }
-            }
-        };
-        r.run();
+        hasRunnable = true;
+        h.post(r);
     }
 
     public void step() {
         next = nextPosition[current - 30] + 30 - 1;
-       /*if(next == begin) {
-            Button jumpOne = (Button)findViewById(R.id.nextBtn);
-            Button contin = (Button)findViewById(R.id.continuousBtn);
-            jumpOne.setEnabled(false);
-            contin.setEnabled(false);
-        }
-        else {
-            int nextID = getResources().getIdentifier("textView" + next, "id", getPackageName());
-            int currentID = getResources().getIdentifier("textView" + current, "id", getPackageName());
-            TextView currentTV = (TextView)findViewById(currentID);
-            TextView nextTV = (TextView) findViewById(nextID);
-            nextTV.setBackgroundColor(android.graphics.Color.RED);
-            currentTV.setText("");
-            nextTV.setText("@");
-            current = next;
-        }*/
         int nextID = getResources().getIdentifier("textView" + next, "id", getPackageName());
         int currentID = getResources().getIdentifier("textView" + current, "id", getPackageName());
         TextView currentTV = (TextView)findViewById(currentID);
@@ -151,26 +156,24 @@ public class MainActivity extends AppCompatActivity {
         nextTV.setBackgroundColor(android.graphics.Color.RED);
         currentTV.setText("");
         nextTV.setText("@");
-        current = next;
-        if(next == begin) {
-            Button jumpOne = (Button)findViewById(R.id.helpBtn);
-            jumpOne.setEnabled(false);
-        }
+        last = current;
         current = next;
     }
 
 
     public void clickTV(View v) {
         TextView scoreTV = (TextView) findViewById(R.id.scoreTV);
+        Context context =this;
 
         int current_score = Integer.parseInt(scoreTV.getText().toString());
         int currentID = getResources().getIdentifier("textView" + current, "id", getPackageName());
-        int thisID = v.getId();
         TextView currentTV = (TextView)findViewById(currentID);
-        TextView thisTV = (TextView)findViewById(thisID);
-        int colorID =  ((ColorDrawable) v.getBackground()).getColor();
+        TextView thisTV = (TextView)findViewById(v.getId());
+        int colorID = ContextCompat.getColor(context, (thisTV.getBackground()).getC);
         if(v.getId() == currentID) {
             current_score+=5;
+            Log.i("before", String.valueOf(colorID));
+            Log.i("yEllo", String.valueOf(Color.YELLOW));
             if(colorID == Color.YELLOW)
                 current_score++;
             TextView hitTV = (TextView)findViewById(R.id.hitTV);
@@ -178,18 +181,27 @@ public class MainActivity extends AppCompatActivity {
             current_hit = current_hit + 1;
             hitTV.setText(String.valueOf(current_hit));
             currentTV.setBackgroundColor(Color.GREEN);
+            colorID = ContextCompat.getColor(context, null);
+            Log.i("after", String.valueOf(colorID));
         }
         else if(v.getId() != currentID) {
             TextView missTV = (TextView)findViewById(R.id.missTV);
             int current_miss = Integer.parseInt(missTV.getText().toString());
+            //colorID = ContextCompat.getColor(context, v.getId());
             if(colorID != Color.GREEN) {
+                Log.i("color", String.valueOf(colorID));
                 current_score--;
                 current_miss++;
                 missTV.setText(String.valueOf(current_miss));
-                thisTV.setBackgroundColor(Color.YELLOW);
+                if(colorID!= Color.YELLOW || colorID != Color.GREEN);
+                   thisTV.setBackgroundColor(Color.YELLOW);
             }
         }
         scoreTV.setText(String.valueOf(current_score));
+    }
+    public void goToHelpPage (View v) {
+        Intent helpPage = new Intent(this, HelpPage.class);
+        startActivity(helpPage);
     }
 }
 
