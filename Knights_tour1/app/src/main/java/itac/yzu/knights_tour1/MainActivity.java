@@ -3,7 +3,6 @@ package itac.yzu.knights_tour1;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,7 +16,6 @@ import android.content.Intent;
 import java.util.Random;
 import android.os.Handler;
 
-import org.w3c.dom.Text;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -51,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
 
-    boolean isNewGame = false;
+    int isNewGame = 0;
     boolean hasRunnable = false;
     int begin;
     int current;
@@ -169,7 +167,13 @@ public class MainActivity extends AppCompatActivity {
         int currentID = getResources().getIdentifier("textView" + current, "id", getPackageName());
         TextView currentTV = (TextView)findViewById(currentID);
         TextView thisTV = (TextView)findViewById(v.getId());
-        int colorID = ContextCompat.getColor(context, (thisTV.getBackground()).getC);
+        int colorID = 0;
+        if (thisTV.getBackground() instanceof ColorDrawable) {
+            ColorDrawable cd = (ColorDrawable) thisTV.getBackground();
+            colorID = cd.getColor();
+        }
+        //int colorID = ((ColorDrawable) thisTV.getBackground()).getColor();
+         //= ContextCompat.getColor(this, );
         if(v.getId() == currentID) {
             current_score+=5;
             Log.i("before", String.valueOf(colorID));
@@ -181,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
             current_hit = current_hit + 1;
             hitTV.setText(String.valueOf(current_hit));
             currentTV.setBackgroundColor(Color.GREEN);
-            colorID = ContextCompat.getColor(context, null);
+            //colorID = ContextCompat.getColor(context, null);
             Log.i("after", String.valueOf(colorID));
         }
         else if(v.getId() != currentID) {
@@ -193,8 +197,7 @@ public class MainActivity extends AppCompatActivity {
                 current_score--;
                 current_miss++;
                 missTV.setText(String.valueOf(current_miss));
-                if(colorID!= Color.YELLOW || colorID != Color.GREEN);
-                   thisTV.setBackgroundColor(Color.YELLOW);
+                thisTV.setBackgroundColor(Color.YELLOW);
             }
         }
         scoreTV.setText(String.valueOf(current_score));

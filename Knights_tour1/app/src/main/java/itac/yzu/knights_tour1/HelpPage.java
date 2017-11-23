@@ -16,7 +16,6 @@ public class HelpPage extends AppCompatActivity {
 
     public void startNewGame(View v) {
         Intent newGame = new Intent(this, MainActivity.class);
-
         startActivity(newGame);
     }
 
