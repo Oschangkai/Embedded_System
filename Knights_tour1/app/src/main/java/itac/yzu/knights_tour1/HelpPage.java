@@ -1,11 +1,13 @@
 package itac.yzu.knights_tour1;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 public class HelpPage extends AppCompatActivity {
+
 
 
     @Override
@@ -24,6 +26,10 @@ public class HelpPage extends AppCompatActivity {
         startActivity(continueGame);
     }
     public void endGame(View v) {
+       /* Intent killtheKnight = new Intent();
+        killtheKnight.putExtra("result",1);
+        setResult(MainActivity.RESULT_OK, killtheKnight);*/
+        MainActivity.kt.finish();
         finish();
     }
 }

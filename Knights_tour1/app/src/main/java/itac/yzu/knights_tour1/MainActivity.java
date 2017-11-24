@@ -1,5 +1,6 @@
 package itac.yzu.knights_tour1;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -17,10 +18,11 @@ import java.util.Random;
 import android.os.Handler;
 
 
-
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+    public static Activity kt;
+
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -46,8 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         }
+        kt = this;
         init();
     }
+
 
     int isNewGame = 0;
     boolean hasRunnable = false;
@@ -204,6 +208,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goToHelpPage (View v) {
         Intent helpPage = new Intent(this, HelpPage.class);
+       /* startActivityForResult(helpPage, 1);*/
         startActivity(helpPage);
     }
 }
