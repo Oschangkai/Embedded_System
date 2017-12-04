@@ -8,20 +8,24 @@ import android.view.View;
 
 public class HelpPage extends AppCompatActivity {
 
-
-
+    public boolean started;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help_page);
+        started = false;
     }
 
     public void startNewGame(View v) {
         Intent newGame = new Intent(this, MainActivity.class);
+        newGame.putExtra("RESUME", "FALSE");
+        started = true;
         startActivity(newGame);
     }
 
-    public void continueGame (View v) {
+    public void continueGame(View v) {
+        if(!started)
+            return;
         Intent continueGame = new Intent(this, MainActivity.class);
         continueGame.putExtra("RESUME", "TRUE");
         startActivity(continueGame);
