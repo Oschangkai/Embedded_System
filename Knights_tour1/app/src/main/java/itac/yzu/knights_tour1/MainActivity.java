@@ -21,8 +21,8 @@ import android.os.Handler;
 public class MainActivity extends AppCompatActivity {
 
     public static Activity kt;
-
-        @Override
+    Bundle b;
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         kt = this;
+        b = this.getIntent().getExtras();
         init();
     }
 
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 currentTV.setText("");
                 nextTV.setText("@");
                 h.removeCallbacks(r);
+                hasRunnable = false;
             }
         }
     };
@@ -109,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         walkall();
     }
 
+    // newGameBtn clicked
     public void restart(View v) {
         for(int i = 30; i < 94; ++i ) {
             int id = getResources().getIdentifier("textView"+i, "id",getPackageName());
@@ -164,6 +167,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void clickTV(View v) {
+        if(!hasRunnable)
+            return;
         TextView scoreTV = (TextView) findViewById(R.id.scoreTV);
         Context context =this;
 
@@ -210,6 +215,19 @@ public class MainActivity extends AppCompatActivity {
         Intent helpPage = new Intent(this, HelpPage.class);
        /* startActivityForResult(helpPage, 1);*/
         startActivity(helpPage);
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+        h.removeCallbacks(r);
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if( b != null && b.getString("REUSME") == "TRUE") {
+            r.run();
+            b.clear();
+        }
     }
 }
 

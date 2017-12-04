@@ -23,6 +23,7 @@ public class HelpPage extends AppCompatActivity {
 
     public void continueGame (View v) {
         Intent continueGame = new Intent(this, MainActivity.class);
+        continueGame.putExtra("RESUME", "TRUE");
         startActivity(continueGame);
     }
     public void endGame(View v) {
