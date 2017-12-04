@@ -238,11 +238,9 @@ public class MainActivity extends AppCompatActivity {
             return;
         Log.d(TAG,"測試"+b.getString("RESUME"));
 //        String RESUME = b.getString("RESUME");
-//        Log.d(TAG, b.getString("RESUME"));
 //        if(RESUME == "TRUE") {
 //            hasRunnable = true;
 //            r.run();
-//            b.clear();
 //        }
     }
 
