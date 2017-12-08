@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     // Find Elements in View
@@ -234,11 +235,15 @@ public class MainActivity extends AppCompatActivity {
             ideal_weight_resultTV.setText(idealWeightResult[4]);
         }
     }
-    int save1 = R.id.save1BTN;
-    int load1 = R.id.load1BTN;
+    int save1Btn = R.id.save1BTN;
+    int load1Btn = R.id.load1BTN;
 
     public void saveBtnClicked(View v) {
-        String User = v.getId() == save1? "User1":"User2";
+        if(!isOkToShowText()) {
+            Toast.makeText(v.getContext(), "INPUT IS NOT COMPLETE!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        String User = v.getId() == save1Btn? "User1":"User2";
         SharedPreferences data = getSharedPreferences(User, 0);
         SharedPreferences.Editor editor = data.edit();
         editor.putString("height", heightET.getText().toString());
@@ -250,10 +255,15 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("suggestion", suggestionTV.getText().toString());
         editor.putInt("gender", genderRadioGroup.getCheckedRadioButtonId());
         editor.commit();
+        Toast.makeText(v.getContext(), "SAVED", Toast.LENGTH_SHORT).show();
     }
     public void loadBtnClicked(View v) {
-        String User = v.getId() == load1? "User1":"User2";
+        String User = v.getId() == load1Btn? "User1":"User2";
         SharedPreferences data = getSharedPreferences(User, 0);
+        if(data.getString("height", "0") == "0") {
+            Toast.makeText(v.getContext(), "NO SAVED DATA!", Toast.LENGTH_SHORT).show();
+            return;
+        }
         heightET.setText(data.getString("height", "0"));
         weightET.setText(data.getString("weight", "0"));
         bmiTV.setText(data.getString("bmi", ""));
@@ -262,5 +272,17 @@ public class MainActivity extends AppCompatActivity {
         ideal_weight_resultTV.setText(data.getString("ideal_weight_result", ""));
         suggestionTV.setText(data.getString("suggestion", ""));
         genderRadioGroup.check(data.getInt("gender", R.id.maleRadioBtn));
+        Toast.makeText(v.getContext(), "LOADED", Toast.LENGTH_SHORT).show();
+    }
+
+    public void debug(View v) {
+        SharedPreferences u1 = getSharedPreferences("User1", 0);
+        SharedPreferences u2 = getSharedPreferences("User2", 0);
+        SharedPreferences.Editor edit = u1.edit();
+        edit.clear();
+        edit.commit();
+        edit = u2.edit();
+        edit.clear();
+        edit.commit();
     }
 }
