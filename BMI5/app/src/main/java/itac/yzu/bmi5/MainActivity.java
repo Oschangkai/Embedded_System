@@ -1,10 +1,12 @@
 package itac.yzu.bmi5;
 
+import android.content.SharedPreferences;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -232,5 +234,33 @@ public class MainActivity extends AppCompatActivity {
             ideal_weight_resultTV.setText(idealWeightResult[4]);
         }
     }
+    int save1 = R.id.save1BTN;
+    int load1 = R.id.load1BTN;
 
+    public void saveBtnClicked(View v) {
+        String User = v.getId() == save1? "User1":"User2";
+        SharedPreferences data = getSharedPreferences(User, 0);
+        SharedPreferences.Editor editor = data.edit();
+        editor.putString("height", heightET.getText().toString());
+        editor.putString("weight", weightET.getText().toString());
+        editor.putString("bmi", bmiTV.getText().toString());
+        editor.putString("ideal_weight", ideal_weightTV.getText().toString());
+        editor.putString("bmi_result", bmi_resultTV.getText().toString());
+        editor.putString("ideal_weight_result", ideal_weight_resultTV.getText().toString());
+        editor.putString("suggestion", suggestionTV.getText().toString());
+        editor.putInt("gender", genderRadioGroup.getCheckedRadioButtonId());
+        editor.commit();
+    }
+    public void loadBtnClicked(View v) {
+        String User = v.getId() == load1? "User1":"User2";
+        SharedPreferences data = getSharedPreferences(User, 0);
+        heightET.setText(data.getString("height", "0"));
+        weightET.setText(data.getString("weight", "0"));
+        bmiTV.setText(data.getString("bmi", ""));
+        ideal_weightTV.setText(data.getString("ideal_weight", ""));
+        bmi_resultTV.setText(data.getString("bmi_result", ""));
+        ideal_weight_resultTV.setText(data.getString("ideal_weight_result", ""));
+        suggestionTV.setText(data.getString("suggestion", ""));
+        genderRadioGroup.check(data.getInt("gender", R.id.maleRadioBtn));
+    }
 }

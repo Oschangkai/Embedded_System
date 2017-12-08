@@ -206,9 +206,56 @@
         android:id="@+id/resetBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="228dp"
         android:onClick="resetAll"
         android:text="重置系統"
         app:layout_constraintRight_toRightOf="@+id/genderRadioGroup"
         app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
+
+    <Button
+        android:id="@+id/save2BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="saveBtnClicked"
+        android:text="Save User 2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/resetBTN"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/load2BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="loadBtnClicked"
+        android:text="Load User 2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/resetBTN"
+        app:layout_constraintEnd_toStartOf="@+id/resetBTN"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/save2BTN" />
+
+    <Button
+        android:id="@+id/save1BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="saveBtnClicked"
+        android:text="Save User 1"
+        app:layout_constraintBottom_toTopOf="@+id/save2BTN"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/save2BTN" />
+
+    <Button
+        android:id="@+id/load1BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="loadBtnClicked"
+        android:text="Load User 1"
+        app:layout_constraintBottom_toTopOf="@+id/load2BTN"
+        app:layout_constraintStart_toStartOf="@+id/load2BTN" />
 </android.support.constraint.ConstraintLayout>
