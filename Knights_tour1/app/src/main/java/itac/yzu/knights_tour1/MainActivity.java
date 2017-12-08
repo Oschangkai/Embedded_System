@@ -233,9 +233,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
+        /*if(HelpPage.hp != null)
+            HelpPage.hp.finish();*/
+
         b = this.getIntent().getExtras();
-        if(b == null)
+
+        if(b == null) {
+            Log.d("NULL", "b is nullFSDAFASDFASD");
             return;
+        }
         Log.d(TAG,"測試"+b.getString("RESUME"));
 //        String RESUME = b.getString("RESUME");
 //        if(RESUME == "TRUE") {

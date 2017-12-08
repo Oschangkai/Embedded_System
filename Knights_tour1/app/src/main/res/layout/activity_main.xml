@@ -516,9 +516,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="228dp"
         android:onClick="goToHelpPage"
         android:text="Help"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -527,7 +527,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="52dp"
         android:onClick="restart"
         android:text="重新開始"
         app:layout_constraintRight_toRightOf="parent"
