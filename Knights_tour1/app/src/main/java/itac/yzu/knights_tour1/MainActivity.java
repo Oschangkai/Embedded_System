@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     int begin;
     int current;
     int next;
+    int stopped = 0;
     int last;
     int[] nextPosition = {11, 12, 9, 19, 20, 21, 13, 23,
                         26, 4, 5, 6, 3, 8, 32, 22,
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 nextTV.setText("@");
                 h.removeCallbacks(r);
                 hasRunnable = false;
+                stopped = 1;
             }
         }
     };
@@ -111,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         scoreTV.setText("0");
         hitTV.setText("0");
         missTV.setText("0");
+        stopped = 0;
         walkall();
     }
 
@@ -144,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
         row.setText("");
         col.setText("");
+
         if(hasRunnable)
             h.removeCallbacks(r);
         init();
@@ -188,8 +192,6 @@ public class MainActivity extends AppCompatActivity {
          //= ContextCompat.getColor(this, );
         if(v.getId() == currentID) {
             current_score+=5;
-            Log.i("before", String.valueOf(colorID));
-            Log.i("yEllo", String.valueOf(Color.YELLOW));
             if(colorID == Color.YELLOW)
                 current_score++;
             TextView hitTV = (TextView)findViewById(R.id.hitTV);
@@ -199,14 +201,12 @@ public class MainActivity extends AppCompatActivity {
             _CurrentHit = current_hit;
             currentTV.setBackgroundColor(Color.GREEN);
             //colorID = ContextCompat.getColor(context, null);
-            Log.i("after", String.valueOf(colorID));
         }
         else if(v.getId() != currentID) {
             TextView missTV = (TextView)findViewById(R.id.missTV);
             int current_miss = Integer.parseInt(missTV.getText().toString());
             //colorID = ContextCompat.getColor(context, v.getId());
             if(colorID != Color.GREEN) {
-                Log.i("color", String.valueOf(colorID));
                 current_score--;
                 current_miss++;
                 missTV.setText(String.valueOf(current_miss));
@@ -219,16 +219,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goToHelpPage (View v) {
         Intent helpPage = new Intent(this, HelpPage.class);
-       /* startActivityForResult(helpPage, 1);*/
         startActivity(helpPage);
+        overridePendingTransition(R.animator.slide_from_left, R.animator.slide_to_right);
     }
     @Override
     public void onPause() {
         super.onPause();
         h.removeCallbacks(r);
         hasRunnable = false;
-        if(b != null)
-            getIntent().removeExtra("RESUME");
     }
     @Override
     public void onResume() {
@@ -236,22 +234,42 @@ public class MainActivity extends AppCompatActivity {
         /*if(HelpPage.hp != null)
             HelpPage.hp.finish();*/
 
-        b = this.getIntent().getExtras();
+
+        /*if (getIntent() == null)
+            return;
+        Log.d("NULL", "Intent is not NULL");
+        String a = getIntent().getStringExtra("RESUME");
+        Log.d("NULL", a);
+
+        if(a == "FALSE") {
+            Log.d("NULL", a);
+        }
+        if(a == "TRUE") {
+            Log.d("NULL", "r is TRUE");
+            return;
+        }*/
+        /*b = this.getIntent().getExtras();
 
         if(b == null) {
-            Log.d("NULL", "b is nullFSDAFASDFASD");
+            Log.d("NULL", "b is NULL");
             return;
-        }
-        Log.d(TAG,"測試"+b.getString("RESUME"));
+        }*/
+        //Log.d(TAG,"測試"+b.getString("RESUME"));
 //        String RESUME = b.getString("RESUME");
 //        if(RESUME == "TRUE") {
 //            hasRunnable = true;
 //            r.run();
 //        }
+
+        if(!hasRunnable && stopped != 1) {
+            hasRunnable = true;
+            r.run();
+        }
     }
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
+        //super.onSaveInstanceState(savedInstanceState);
         // Save the user's current game state
         savedInstanceState.putInt("_CurrentScore", _CurrentScore);
         savedInstanceState.putInt("_CurrentHit", _CurrentScore);
