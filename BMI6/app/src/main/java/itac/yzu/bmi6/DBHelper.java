@@ -114,6 +114,14 @@ public class DBHelper extends SQLiteOpenHelper {
         return UserProfileList;
     }
 
+    // DELETE ONE RECORD
+    public void deleteUserProfile(UserProfile up) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.delete(DB_Table, NAME_COL+"=?",
+                new String[] { up.getName() } );
+        db.close();
+    }
+
     // CLEAR ALL
     public void clearDB() {
         SQLiteDatabase db=this.getWritableDatabase();

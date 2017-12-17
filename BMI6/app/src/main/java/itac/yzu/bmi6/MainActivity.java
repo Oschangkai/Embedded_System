@@ -295,6 +295,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "資料已儲存", Toast.LENGTH_SHORT).show();
         }
     }
+
     public void loadBtnClicked(View v) {
         Intent i = new Intent(this, DataListActivity.class);
         Bundle b = new Bundle();
@@ -302,6 +303,7 @@ public class MainActivity extends AppCompatActivity {
         i.putExtras(b);
         startActivity(i);
     }
+
     public void deleteBtnClicked(View v) {
         Intent i = new Intent(this, DataListActivity.class);
         Bundle b = new Bundle();
@@ -309,6 +311,7 @@ public class MainActivity extends AppCompatActivity {
         i.putExtras(b);
         startActivity(i);
     }
+
     public void debugBtnClicked(View v) {
         db.clearDB();
     }

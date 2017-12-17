@@ -8,18 +8,17 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class UserProfileAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
     private ArrayList<UserProfile> UserProfiles;
-    private boolean mode;
+    private DBHelper db;
 
-    public UserProfileAdapter(Context context, ArrayList<UserProfile> UserProfile, boolean mode) {
+    public UserProfileAdapter(Context context, ArrayList<UserProfile> UserProfile) {
         inflater = LayoutInflater.from(context);
         this.UserProfiles = UserProfile;
-        this.mode = mode;
+        db = new DBHelper(context);
     }
 
     @Override
@@ -53,28 +52,20 @@ public class UserProfileAdapter extends BaseAdapter {
             vHolder = (ViewHolder) convertView.getTag();
         }
 
-        UserProfile uProfile = (UserProfile)getItem(position);
+        final UserProfile uProfile = (UserProfile)getItem(position);
         vHolder.txtName.setText(uProfile.getName());
         vHolder.txtGender.setText(uProfile.getGender());
         vHolder.txtHeight.setText(String.valueOf(uProfile.getHeight()));
         vHolder.txtWeight.setText(String.valueOf(uProfile.getWeight()));
 
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(mode) {
-                  // LOAD MODE
-
-                } else {
-                    // DELETE MODE
-                }
-            }
-        });
-
         return convertView;
     }
 
 
+    public void updateView() {
+        UserProfiles = db.getAllUserProfile();
+        this.notifyDataSetChanged();
+    }
 
     private class ViewHolder {
         TextView txtName;

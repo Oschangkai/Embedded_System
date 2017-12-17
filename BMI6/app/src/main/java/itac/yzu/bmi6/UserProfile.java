@@ -1,6 +1,5 @@
 package itac.yzu.bmi6;
 
-
 public class UserProfile {
     // MEMBER ATTRIBUTES
     private String Name;
@@ -9,6 +8,8 @@ public class UserProfile {
     private Double Weight;
 
     // CONSTRUCTOR
+    public UserProfile() {    }
+
     public UserProfile(String name, String gender, Double height, Double weight){
         Name = name;
         Gender = gender;
@@ -29,6 +30,12 @@ public class UserProfile {
     public Double getWeight(){
         return Weight;
     }
+
+    // SETS
+    public void setName(String name) { this.Name = name; }
+    public void setGender(String gender) { this.Gender = gender; }
+    public void setHeight(Double height) { this.Height = height; }
+    public void setWeight(Double weight) { this.Weight = weight; }
 
 
 }
