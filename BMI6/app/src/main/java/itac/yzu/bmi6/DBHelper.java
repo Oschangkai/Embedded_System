@@ -75,7 +75,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         return exists;
     }
-    
+
     // UPDATE ONE RECORD
     public void updateUserProfile(UserProfile up) {
         SQLiteDatabase db = this.getWritableDatabase();

@@ -145,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Reset all TextView
     public void resetAll(View v) {
+        nameET.setText("");
         heightET.setText("0");
         weightET.setText("0");
 
@@ -284,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     db.updateUserProfile(u);
-                    Toast.makeText(MainActivity.this, "資料已儲存", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "資料已更新", Toast.LENGTH_SHORT).show();
                 }
             });
             dialog.show();
