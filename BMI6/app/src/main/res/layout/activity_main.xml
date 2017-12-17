@@ -239,6 +239,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="4dp"
+        android:onClick="saveBtnClicked"
         android:text="Save"
         app:layout_constraintBaseline_toBaselineOf="@+id/resetBTN"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -258,7 +259,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
+        android:onClick="deleteBtnClicked"
         android:text="Delete"
         app:layout_constraintBaseline_toBaselineOf="@+id/resetBTN"
         app:layout_constraintStart_toEndOf="@+id/loadBTN" />
+
+    <Button
+        android:id="@+id/debugBTN"
+        android:layout_width="74dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:onClick="debugBtnClicked"
+        android:text="Debug"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 </android.support.constraint.ConstraintLayout>

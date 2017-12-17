@@ -1,7 +1,9 @@
 package itac.yzu.bmi6;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.IdRes;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,9 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     // Find Elements in View
+    EditText nameET;
     EditText heightET;
     EditText weightET;
 
@@ -26,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
     TextView suggestionTV;
 
     RadioGroup genderRadioGroup;
+
+    String n;
+    String g;
+    Double h;
+    Double w;
+    DBHelper db = new DBHelper(this);
 
     // Definitions
     double[] bmiLevel = {18.5, 24, 27, 30, 35};
@@ -45,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        nameET = (EditText)findViewById(R.id.nameET);
         heightET = (EditText)findViewById(R.id.heightET);
         weightET = (EditText)findViewById(R.id.weightET);
 
@@ -64,6 +75,23 @@ public class MainActivity extends AppCompatActivity {
         View view = findViewById(android.R.id.content);
         resetAll(view);
 
+        nameET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                showSuggestion();
+            }
+        });
+
         heightET.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -75,14 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                if(isOkToShowText()) {
-                    double height = Double.parseDouble(heightET.getText().toString());
-                    double weight = Double.parseDouble(weightET.getText().toString());
-                    double BMI = calculateBMI(height, weight);
-                    bmiTV.setText(String.format("%.1f", BMI));
-                    calculateIdeal(height, weight, gender);
-                    BMIText(BMI);
-                } else resetSuggestion();
+                showSuggestion();
             }
         });
 
@@ -99,14 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                if(isOkToShowText()) {
-                    double height = Double.parseDouble(heightET.getText().toString());
-                    double weight = Double.parseDouble(weightET.getText().toString());
-                    double BMI = calculateBMI(height, weight);
-                    bmiTV.setText(String.format("%.1f", BMI));
-                    calculateIdeal(height, weight, gender);
-                    BMIText(BMI);
-                } else resetSuggestion();
+                showSuggestion();
             }
 
         });
@@ -123,14 +137,7 @@ public class MainActivity extends AppCompatActivity {
                         gender = 'f';
                         break;
                 }
-                if(isOkToShowText()) {
-                    double height = Double.parseDouble(heightET.getText().toString());
-                    double weight = Double.parseDouble(weightET.getText().toString());
-                    double BMI = calculateBMI(height, weight);
-                    bmiTV.setText(String.format("%.1f", BMI));
-                    calculateIdeal(height, weight, gender);
-                    BMIText(BMI);
-                } else resetSuggestion();
+                showSuggestion();
             }
         });
 
@@ -155,7 +162,11 @@ public class MainActivity extends AppCompatActivity {
         ideal_weight_resultTV.setText("");
         suggestionTV.setText("");
     }
-    public boolean isOkToShowText() {
+
+    // Show Suggestion
+    public boolean isOkToShowSuggestion() {
+        if(nameET.getText().toString().equals(""))
+            return false;
         if(heightET.getText().toString().equals(""))
             return false;
         if(weightET.getText().toString().equals(""))
@@ -164,16 +175,34 @@ public class MainActivity extends AppCompatActivity {
             return false;
         if(weightET.getText().toString().equals("0"))
             return false;
+        setValues();
         return true;
     }
 
-    // Calculate BMI
+    public void showSuggestion() {
+        if(isOkToShowSuggestion()) {
+            double height = Double.parseDouble(heightET.getText().toString());
+            double weight = Double.parseDouble(weightET.getText().toString());
+            double BMI = calculateBMI(height, weight);
+            bmiTV.setText(String.format("%.1f", BMI));
+            calculateIdeal(height, weight, gender);
+            BMIText(BMI);
+        } else resetSuggestion();
+    }
+
+    public void setValues() {
+        n = nameET.getText().toString();
+        g = gender == 'm' ? "M": "F";
+        h = Double.parseDouble(heightET.getText().toString());
+        w = Double.parseDouble(weightET.getText().toString());
+    }
+
+    // Calculation
     public double calculateBMI(double h, double weight) {
         double height = h / 100;
         return weight / height / height;
     }
 
-    // Calculate ideal weight
     public void calculateIdeal(double height, double weight, char g) {
         switch(g) {
             case 'm':
@@ -233,8 +262,46 @@ public class MainActivity extends AppCompatActivity {
             ideal_weight_resultTV.setText(idealWeightResult[4]);
         }
     }
+
+    // Button Clicked
+    public void saveBtnClicked(View v) {
+        if(!isOkToShowSuggestion()) {
+            Toast.makeText(v.getContext(), "INPUT IS NOT COMPLETE!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        final UserProfile u = new UserProfile(n, g, h, w);
+        if(db.UserProfileExists(n)) {
+            AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+            dialog.setTitle("資料已存在");
+            dialog.setMessage("是否要覆蓋資料");
+            dialog.setNegativeButton("不要", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Toast.makeText(MainActivity.this, "資料將不會被覆蓋", Toast.LENGTH_SHORT).show();
+                }
+            });
+            dialog.setPositiveButton("好的", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    db.updateUserProfile(u);
+                    Toast.makeText(MainActivity.this, "資料已儲存", Toast.LENGTH_SHORT).show();
+                }
+            });
+            dialog.show();
+
+        } else {
+            db.addUserProfile(u);
+            Toast.makeText(MainActivity.this, "資料已儲存", Toast.LENGTH_SHORT).show();
+        }
+    }
     public void loadBtnClicked(View v) {
         Intent i = new Intent(this, DataListActivity.class);
         startActivity(i);
+    }
+    public void deleteBtnClicked(View v) {
+
+    }
+    public void debugBtnClicked(View v) {
+        db.clearDB();
     }
 }
