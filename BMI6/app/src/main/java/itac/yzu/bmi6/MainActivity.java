@@ -297,10 +297,17 @@ public class MainActivity extends AppCompatActivity {
     }
     public void loadBtnClicked(View v) {
         Intent i = new Intent(this, DataListActivity.class);
+        Bundle b = new Bundle();
+        b.putString("MODE", "LOAD");
+        i.putExtras(b);
         startActivity(i);
     }
     public void deleteBtnClicked(View v) {
-
+        Intent i = new Intent(this, DataListActivity.class);
+        Bundle b = new Bundle();
+        b.putString("MODE", "DELETE");
+        i.putExtras(b);
+        startActivity(i);
     }
     public void debugBtnClicked(View v) {
         db.clearDB();

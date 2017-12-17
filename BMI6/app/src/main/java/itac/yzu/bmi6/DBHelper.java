@@ -93,7 +93,7 @@ public class DBHelper extends SQLiteOpenHelper {
     // GET ALL RECORDS FROM DATABASE
     public ArrayList<UserProfile> getAllUserProfile() {
         ArrayList<UserProfile> UserProfileList = new ArrayList<>();
-        String getAllQuery = "SELECT * FROM " + DB_NAME;
+        String getAllQuery = "SELECT * FROM " + DB_Table;
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(getAllQuery, null);
