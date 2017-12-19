@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         // Show data if bundle exists (it means, loaded button clicked)
         Bundle b;
         b = this.getIntent().getExtras();
-        if(b != null) {
+        try {
             n = b.getString("name");
             g = b.getString("gender");
             h = b.getDouble("height");
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             heightET.setText(String.valueOf(h));
             weightET.setText(String.valueOf(w));
             Toast.makeText(MainActivity.this, "LOADED", Toast.LENGTH_SHORT).show();
-        }
+        } catch (Exception e) { }
 
     }
 
