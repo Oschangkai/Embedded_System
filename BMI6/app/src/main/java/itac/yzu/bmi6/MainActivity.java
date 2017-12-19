@@ -141,6 +141,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Show data if bundle exists (it means, loaded button clicked)
+        Bundle b;
+        b = this.getIntent().getExtras();
+        if(b != null) {
+            n = b.getString("name");
+            g = b.getString("gender");
+            h = b.getDouble("height");
+            w = b.getDouble("weight");
+            nameET.setText(n);
+            genderRadioGroup.check( g.equals("M") ? R.id.maleRadioBtn: R.id.femaleRadioBtn);
+            heightET.setText(String.valueOf(h));
+            weightET.setText(String.valueOf(w));
+            Toast.makeText(MainActivity.this, "LOADED", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     // Reset all TextView

@@ -1,10 +1,10 @@
 package itac.yzu.bmi6;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -38,7 +38,6 @@ public class DataListActivity extends AppCompatActivity {
 
         // Set
         up = db.getAllUserProfile();
-        Log.d("YEE", "B4"+String.valueOf(up.size()));
         adapter = new UserProfileAdapter(DataListActivity.this, up);
         lsv.setAdapter(adapter);
         lsv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -50,18 +49,25 @@ public class DataListActivity extends AppCompatActivity {
                         Double.valueOf(((TextView)view.findViewById(R.id.heightTV)).getText().toString()),
                         Double.valueOf(((TextView)view.findViewById(R.id.weightTV)).getText().toString())
                 );
+                AlertDialog.Builder dialog = new AlertDialog.Builder(DataListActivity.this);
                 if(mode) {
                   // LOAD MODE
-
+                  Bundle b = new Bundle();
+                  b.putString("name", selected.getName());
+                  b.putString("gender", selected.getGender());
+                  b.putDouble("height", selected.getHeight());
+                  b.putDouble("weight", selected.getWeight());
+                  Intent i = new Intent(DataListActivity.this, MainActivity.class);
+                  i.putExtras(b);
+                  startActivity(i);
                 } else {
                     // DELETE MODE
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(DataListActivity.this);
                     dialog.setTitle("刪除");
                     dialog.setMessage("你確定要刪除「" + selected.getName() + "」?");
                     dialog.setNegativeButton("不要", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            Toast.makeText(DataListActivity.this, "「" + selected.getName() + "」將不會被刪除", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DataListActivity.this, "「" + selected.getName() + "」不會被刪除", Toast.LENGTH_SHORT).show();
                         }
                     });
                     dialog.setPositiveButton("好", new DialogInterface.OnClickListener() {
@@ -74,7 +80,6 @@ public class DataListActivity extends AppCompatActivity {
                     });
                     dialog.show();
                 }
-                adapter.notifyDataSetChanged();
             }
         });
 
