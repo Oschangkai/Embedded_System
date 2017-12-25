@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TripTaoTwo</string>
+    <string name="tab_text_1">今日天氣</string>
+    <string name="tab_text_2">景點</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>
