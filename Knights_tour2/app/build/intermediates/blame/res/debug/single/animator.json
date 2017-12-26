@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Homework\\Embedded_System\\Knights_tour2\\app\\build\\intermediates\\res\\merged\\debug\\animator\\slide_to_right.xml",
+        "source": "D:\\Homework\\Embedded_System\\Knights_tour2\\app\\src\\main\\res\\animator\\slide_to_right.xml"
+    },
+    {
+        "merged": "D:\\Homework\\Embedded_System\\Knights_tour2\\app\\build\\intermediates\\res\\merged\\debug\\animator\\slide_from_left.xml",
+        "source": "D:\\Homework\\Embedded_System\\Knights_tour2\\app\\src\\main\\res\\animator\\slide_from_left.xml"
+    },
+    {
+        "merged": "D:\\Homework\\Embedded_System\\Knights_tour2\\app\\build\\intermediates\\res\\merged\\debug\\animator\\slide_from_right.xml",
+        "source": "D:\\Homework\\Embedded_System\\Knights_tour2\\app\\src\\main\\res\\animator\\slide_from_right.xml"
+    },
+    {
+        "merged": "D:\\Homework\\Embedded_System\\Knights_tour2\\app\\build\\intermediates\\res\\merged\\debug\\animator\\slide_to_left.xml",
+        "source": "D:\\Homework\\Embedded_System\\Knights_tour2\\app\\src\\main\\res\\animator\\slide_to_left.xml"
+    }
+]
