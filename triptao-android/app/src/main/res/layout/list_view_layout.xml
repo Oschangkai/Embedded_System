@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="169dp">
+
+        <Button
+            android:id="@+id/Tag_btn"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/tag_shape"
+            android:text="Button"
+            android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_light_focused"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:focusable="false"
+            android:clickable="false"/>
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/edt_area" />
+
+        <TextView
+            android:id="@+id/Description"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/site_image"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="3"
+            android:singleLine="false"
+            android:text="TextView"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/edt_area"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/Description"
+            android:text="地區"
+            android:textAlignment="viewStart"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/site_image"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/activitybackground"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/Tag_btn" />
+
+    </RelativeLayout>
+
+</LinearLayout>

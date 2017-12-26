@@ -1,0 +1,367 @@
+[{
+    "name": "元智大學",
+    "tel": "(03)123-1566",
+    "login": "0",
+    "category": {
+      "district": "中壢區",
+      "type": "學校"
+    },
+    "address": "桃園市中壢區遠東路135號",
+    "latlng": {
+      "lat": "25.0063972",
+      "lng": "121.3253326"
+    },
+    "available-time": "",
+    "img": "http://www.iem.yzu.edu.tw/chinese/resource/reportPage/YZU_news/YzuNewsNo736.files/ph2.jpg",
+    "description": "學店",
+    "point": [{
+      "id": "1",
+      "name": "元智一館",
+      "tel": "(03)456-1223",
+      "category": {
+        "type": "學校"
+      },
+      "latlng": {
+        "lat": "25.0063972",
+        "lng": "121.3253326"
+      },
+      "img": "https://ppt.cc/f7S9Bx",
+      "AR-img": "https://truth.bahamut.com.tw/s01/201710/d241a83bc7cb4f63c32da3df1a528a15.PNG",
+      "coupon": ["1"],
+      "available-time": "",
+      "description": "學店第一棟",
+      "restriction": "無"
+    }, {
+      "id": "2",
+      "name": "元智五館",
+      "tel": "(03)456-1223",
+      "category": {
+        "type": "學校"
+      },
+      "latlng": {
+        "lat": "24.9702247",
+        "lng": "121.2656427"
+      },
+      "img": "http://static.panoramio.com/photos/original/26210025.jpg",
+      "AR-img": "https://i.imgur.com/2eOVD0g.png",
+      "coupon": ["1"],
+      "available-time": "",
+      "description": "學店大電視",
+      "restriction": "圖書館禁帶飲食"
+    }],
+    "event": [{
+      "name": "網頁設計演講",
+      "time": "2017.12.3 13:00-15:00"
+    }, {
+      "name": "導生聚會",
+      "time": "2018.1.7 12:00~13:00"
+    }],
+    "coupon": [{
+      "id": "1",
+      "name": "減免學雜費",
+      "point": ["1", "2"], //可使用店家
+      "expiry": "2018.3.31"
+    }, {
+      "id": "2",
+      "name": "原文書買一送一",
+      "point": ["1", "2"],
+      "expiry": "2018.1.31"
+    }],
+    "broadcast": [{
+      "name": "七管在考多益，附近學生請放低音量",
+      "time": "13:00-17:00",
+      "point": ["1", "2"]
+    }, {
+      "name": "資管系同學考試請不要作弊",
+      "time": "2017.11.6-2017.11.10",
+      "point": ["1"]
+    }],
+    "mission": [{
+      "name": "資訊學院一輪遊",
+      "point": ["1", "2"],
+      "coupon": ["2"]
+    }]
+  },
+  {
+    "name": "桃園忠烈祠暨神社文化園區",
+    "tel": "03-3325215",
+    "login": "0",
+    "category": {
+      "district": "桃園區",
+      "type": "園區"
+    },
+    "address": "桃園市桃園區成功路三段200號",
+    "latlng": {
+      "lat": "25.0062905",
+      "lng": "121.3230949"
+    },
+    "available-time": "週一至週日09:00~17:00",
+    "img": "https://c1.staticflickr.com/4/3644/3387635416_8b39992e9b_b.jpg",
+    "description": "座落於桃園市虎頭山上的桃園市忠烈祠，落成於民國二十七年，前身為日本人所建造的「桃園神社」，是臺灣保存最為完整的日治時代神社，建築風格融合了中國古代唐風、日本風及臺灣近代風，採用上等台灣檜木構築，並已在民國八十三年經公告正式被列為國家三級古蹟；也因為特殊的歷史文化價值，而被電影《KANO》選中成為拍片場景，引領觀眾深刻感受1930年代的歲月回憶。",
+    "point": [{
+        "id": "1",
+        "name": "銅馬",
+        "tel": "",
+        "category": {
+          "type": "地標"
+        },
+        "latlng": {
+          "lat": "25.0060863",
+          "lng": "121.3251495"
+        },
+        "img": "https://i.imgur.com/VJeQutW.png",
+        "AR-img": "https://i.imgur.com/VJeQutW.png",
+        "coupon": ["1"],
+        "available-time": "週一至週日09:00~17:00",
+        "description": "為日治時代遺物，全體皆以青銅製造，腹部兩側鑄有代表日本皇室之菊花徽章，飾紋細緻，惟已遭磨損破壞。其造型精神煥發，神采飛揚，栩栩如生。",
+        "restriction": "請勿惡意損毀"
+      },
+      {
+        "id": "2",
+        "name": "拜殿",
+        "tel": "",
+        "category": {
+          "type": "設施"
+        },
+        "latlng": {
+          "lat": "25.0063972",
+          "lng": "121.3253326"
+        },
+        "img": "http://www.formosaimage.com/gallery2/main.php?g2_view=core.DownloadItem&g2_itemId=69741&g2_serialNumber=2",
+        "AR-img": "https://i.imgur.com/n8jwvHp.png",
+        "coupon": ["2"],
+        "available-time": "週一至週日09:00~17:00",
+        "description": "係一般朝拜者列隊祭拜的殿室，祭拜時有奏神樂及舞神舞〈神舞係由神社附近之國小學生演出〉，是全區面積最大的殿宇，與台灣地區傳統寺廟建築之正殿相似，但空間機能卻不同，不是供奉神祇的主殿。",
+        "restriction": "無"
+      }, {
+        "id": "3",
+        "name": "高麗犬",
+        "tel": "",
+        "category": {
+          "type": "地標"
+        },
+        "latlng": {
+          "lat": "25.0063229",
+          "lng": "121.3251877"
+        },
+        "img": "http://www.tonyhuang39.com/2005a/20050108_28.JPG",
+        "AR-img": "https://i.imgur.com/vhm8BgA.png",
+        "coupon": ["3"],
+        "available-time": "週一至週日09:00~17:00",
+        "description": "為日治時代遺物，全體皆以青銅製造，腹部兩側鑄有代表日本皇室之菊花徽章，飾紋細緻，惟已遭磨損破壞。其造型精神煥發，神采飛揚，栩栩如生。",
+        "restriction": "請勿惡意損毀"
+      },
+      {
+        "id": "4",
+        "name": "鳥居",
+        "tel": "",
+        "category": {
+          "type": "設施"
+        },
+        "latlng": {
+          "lat": "25.0060501",
+          "lng": "121.3250198"
+        },
+        "img": "http://www.tonyhuang39.com/2005a/20050108_23.JPG",
+        "AR-img": "https://i.imgur.com/4AFrLCs.png",
+        "coupon": ["4"],
+        "available-time": "週一至週日09:00~17:00",
+        "description": "日人所稱之「鳥居」如同台灣地區傳統的牌坊，具有標示入口意象及區分內外的作用，有多種造型樣式。",
+        "restriction": "無"
+      }
+    ],
+    "event": [{
+      "name": "桃園忠烈祠暨神社文化園區仲夏祝福祭",
+      "time": "2017.8.20"
+    }, {
+      "name": "祭孔習儀",
+      "time": "2017.9.24"
+    }, {
+      "name": "釋奠典禮",
+      "time": "2017.9.28"
+    }],
+    "coupon": [{
+      "id": "1",
+      "name": "搭乘公車半價優惠",
+      "point": ["1", "2", "3", "4"],
+      "expiry": "2018.12.31"
+    }, {
+      "id": "2",
+      "name": "味全埔心牧場門票九折",
+      "point": ["1", "2", "3", "4"],
+      "expiry": "2018.3.31"
+    }, {
+      "id": "3",
+      "name": "特約商店九折",
+      "point": ["1", "2", "3", "4"],
+      "expiry": "2018.3.31"
+    }, {
+      "id": "4",
+      "name": "市民卡紅利點數加倍送",
+      "point": ["1", "2", "3", "4"],
+      "expiry": "2017.11.30"
+    }],
+    "broadcast": [{
+        "name": "豪雨特報",
+        "time": "14:00~16:00",
+        "point": ["1", "2", "3", "4"]
+      }, {
+        "name": "拜殿有毒蛇出沒",
+        "time": "17:00",
+        "point": ["2"]
+      }, {
+        "name": "東司化妝室維修",
+        "time": "11:00~1300",
+        "point": ["1", "2", "3", "4"]
+      }, {
+        "name": "突有落石",
+        "time": "14:00",
+        "point": ["1", "2", "3", "4"]
+      },
+      {
+        "name": "社務所展覽",
+        "time": "13:00~1700",
+        "point": ["2"]
+      }
+    ],
+    "mission": [{
+        "name": "壯士之旅",
+        "point": ["2", "3", "4"],
+        "coupon": ["1"]
+      },
+      {
+        "name": "回到過去",
+        "point": ["1", "3"],
+        "coupon": ["4"]
+      }
+    ]
+  },
+  {
+    "name": "奧爾森林學堂",
+    "tel": "03-3946061",
+    "login": "1",
+    "category": {
+      "district": "桃園區",
+      "type": "園區"
+    },
+    "address": "桃園市桃園區公園路42號",
+    "latlng": {
+      "lat": "25.0018144",
+      "lng": "121.3253783"
+    },
+    "available-time": "08：00~17：00",
+    "img": "http://farm9.staticflickr.com/8081/8376882784_e7488e1a75_b.jpg",
+    "description": "「奧爾森林學堂」位於素有「桃園後花園」美譽的虎頭山公園內，在2012年以不破壞公園內景觀及樹木為原則下，在林木間搭起木製空中步道，同時利用雀榕善於纏繞的特性讓樹木與樹屋共生，打造出充滿生命力的三座「活」樹屋，並以大大小小的貓頭鷹裝飾其中，命名為「奧爾森林學堂」。",
+    "point": [{
+        "id": "1",
+        "name": "溜滑梯",
+        "tel": "",
+        "category": {
+          "type": "設施"
+        },
+        "latlng": {
+          "lat": "25.0022298",
+          "lng": "121.3277102"
+        },
+        "img": "https://5.share.photo.xuite.net/bobowin/1543b67/19152796/1036636363_o.jpg",
+        "AR-img": "https://i.imgur.com/t9gQ4ob.png",
+        "coupon": ["1"],
+        "available-time": "08：00~17：00",
+        "description": "兩層樓水管溜滑梯，是提供小孩子們遊玩的場所，好好玩R",
+        "restriction": "小孩遊玩時需有大人陪同"
+      },
+      {
+        "id": "2",
+        "name": "恐龍雕像",
+        "tel": "",
+        "category": {
+          "type": "地標"
+        },
+        "latlng": {
+          "lat": "25.0018403",
+          "lng": "121.3277587"
+        },
+        "img": "https://img.yukiblog.tw/img/46a8e49594cb_8B10/DSCF3116.jpg",
+        "AR-img": "https://i.imgur.com/VWRv8mW.png",
+        "coupon": ["2"],
+        "available-time": "08：00~17：00",
+        "description": "圓環造景上的厭世恐龍，讓人彷彿置身遊樂園一般，太帥了ㄅ。",
+        "restriction": "請勿惡意損毀"
+      }, {
+        "id": "3",
+        "name": "貓頭鷹福寶",
+        "tel": "",
+        "category": {
+          "type": "地標"
+        },
+        "latlng": {
+          "lat": "25.0020623",
+          "lng": "121.3276226"
+        },
+        "img": "https://i.imgur.com/93M0VZr.jpg",
+        "AR-img": "https://i.imgur.com/4fhlR3T.png",
+        "coupon": ["3"],
+        "available-time": "08：00~17：00",
+        "description": "圓圓der，一點都不可愛的吉祥物，給人一種學識淵博的印象,作為森林學堂的主角再適合不過了。",
+        "restriction": "請勿惡意損毀"
+      }
+    ],
+    "event": [{
+      "name": "透過後製惡搞恐龍，打卡上傳活動",
+      "time": "2017.12.20"
+    }, {
+      "name": "柯P重陽節健行登山活動",
+      "time": "2017.10.28"
+    }],
+    "coupon": [{
+      "id": "1",
+      "name": "熱狗小販全品項8折，滿200再送中杯可樂",
+      "point": ["1"],
+      "expiry": "2017.11.30"
+    },{
+      "id": "2",
+      "name": "厭世恐龍模型買二送一，買三送二",
+      "point": ["2"],
+      "expiry": "2018.1.31"
+    },{
+      "id": "3",
+      "name": "免費兌換福寶明信片",
+      "point": ["3"],
+      "expiry": "2018.12.31"
+    },{
+      "id": "4",
+      "name": "桃園市長鄭文燦親筆簽名乙份",
+      "point": ["1", "2", "3"],
+      "expiry": "2018.12.31"
+    }],
+    "broadcast": [{
+        "name": "溜滑梯區有毒蛇出沒",
+        "time": "14:00~16:00",
+        "point": ["1"]
+      }, {
+        "name": "樹屋維修",
+        "time": "13:00~17:00",
+        "point": ["1", "2", "3"]
+      }, {
+        "name": "樹枝修剪",
+        "time": "14:00~1700",
+        "point": ["1", "2", "3"]
+      }, {
+        "name": "烤肉區無剩餘位子",
+        "time": "11:30",
+        "point": ["1", "2", "3"]
+      },
+      {
+        "name": "步道維修",
+        "time": "10:00~12:00",
+        "point": ["1", "2", "3"]
+      }
+    ],
+    "mission": [{
+        "name": "綠活之旅",
+        "point": ["1", "2", "3"],
+        "coupon": ["4"]
+      }
+    ]
+  }
+]

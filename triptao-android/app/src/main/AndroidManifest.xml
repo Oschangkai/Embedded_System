@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tw.kaiyeee.triptao">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-feature android:name="android.hardware.camera2"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/triptao_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD0gVOeZ30Xh3KH95JYkzd-exU1h0fg2-8" />
+        <activity
+
+            android:name=".app.permission_page"
+            android:parentActivityName=".app.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <!--主頁-->
+        <activity
+            android:name=".app.test_json"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--每個景點activity-->
+        <activity
+            android:label="奧爾森林學堂"
+            android:name=".app.demo01_details_home"
+            android:parentActivityName=".app.test_json"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+
+            android:name=".app.demo01_missionmapfragment"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".app.demo01_details_home"/>
+        <!--任務點-->
+        <activity
+            android:label="關卡資訊"
+            android:name=".app.demo01_mission_page"
+
+            android:parentActivityName=".app.demo01_missionmapfragment"/>
+        <activity
+            android:name=".app.demo01_activity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".app.demo01_details_home"/>
+        <activity
+            android:label="商家資訊"
+            android:name=".app.demo01_storeinfo_material"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".app.demo01_details_home"/>
+
+        <!--任務尚未開始-->
+        <activity
+
+            android:name=".app.demo01_mission_detail_before"
+            android:parentActivityName=".app.demo01_mission_page"/>
+        <!--任務進行中-->
+        <activity
+
+            android:name=".app.demo01_mission_detail_after"
+            android:parentActivityName=".app.demo01_missionmapfragment"/>
+        <activity
+            android:label="優惠券"
+            android:name=".app.demo01_ticket_page"
+            android:parentActivityName=".app.demo01_missionmapfragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+    </application>
+
+</manifest>

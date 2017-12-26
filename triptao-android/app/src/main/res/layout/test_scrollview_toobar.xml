@@ -1,0 +1,138 @@
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0288d1">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="#0288d1">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+           >
+
+            <ImageView
+                android:id="@+id/profile_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:background="#0288d1"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffe5e5e5"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:weightSum="1">
+
+
+        <TextView
+            android:id="@+id/Store_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="奧爾森林學堂"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Store_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="地址"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/edt_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+        <TextView
+            android:id="@+id/Store_Tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="電話"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/edt_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/cardview_dark_background" />
+
+        <TextView
+            android:id="@+id/Store_Opentime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="營業時間"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/edt_opentime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/cardview_dark_background" />
+
+        <TextView
+            android:id="@+id/Store_descrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="簡介"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/edt_descrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="「奧爾森林學堂」位於素有「桃園後花園」美譽的虎頭山公園內，在2012年以不破壞公園內景觀及樹木為原則下，在林木間搭起木製空中步道，同時利用雀榕善於纏繞的特性讓樹木與樹屋共生，打造出充滿生命力的三座「活」樹屋，並以大大小小的貓頭鷹裝飾其中，命名為「奧爾森林學堂」。其中有設計六角形的「讀樹教室」，可近距離觀察樹木生長的生態；從貓頭鷹造型的「咕咕屋」則可窺見鳥類生態；至於船型的「綠野方舟」則是孩子們最佳表演平台，待再久都不厭煩。"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:icon="@android:drawable/ic_dialog_dialer"
+            android:title="地區">
+            <menu>
+                <item
+                    android:id="@+id/nav_chungLi"
+                    android:title="中壢區" />
+                <item
+                    android:id="@+id/nav_GuanIn"
+                    android:title="觀音區" />
+                <item
+                    android:id="@+id/nav_YungMei"
+                    android:title="楊梅區" />
+                <item
+                    android:id="@+id/nav_BaDer"
+                    android:title="八德區" />
+                <item
+                    android:id="@+id/nav_LongTang"
+                    android:title="龍潭區" />
+                <item
+                    android:id="@+id/nav_DaShi"
+                    android:title="大溪區" />
+                <item
+                    android:id="@+id/nav_ShingWu"
+                    android:title="新屋區" />
+                <item
+                    android:id="@+id/nav_Tauyuang"
+                    android:title="桃園區" />
+                <item
+                    android:id="@+id/nav_NeLi"
+                    android:title="內壢區" />
+            </menu>
+        </item>
+        <item
+            android:icon="@android:drawable/ic_dialog_dialer"
+            android:title="種類">
+            <menu>
+                <item
+                    android:id="@+id/nav_YuanChi"
+                    android:title="園區" />
+                <item
+                    android:id="@+id/nav_food"
+                    android:title="美食區" />
+                <item
+                    android:id="@+id/nav_scense"
+                    android:title="景點" />
+                <item
+                    android:id="@+id/nav_shopping"
+                    android:title="購物" />
+                <item
+                    android:id="@+id/nav_show"
+                    android:title="展覽活動" />
+            </menu>
+        </item>
+
+    </group>
+</menu>

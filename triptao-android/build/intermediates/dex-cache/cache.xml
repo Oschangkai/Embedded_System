@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Oschangkai\.android\build-cache\87171d8cba596d66cc569bcea93c47384daee476\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ee07783aa59eefdeacc107abf472f45f60272302">
+        <dex dex="D:\Homework\triptao-android\app\build\intermediates\pre-dexed\debug\classes_8df2609f41b98697da52351699c3a3c47905fe32.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Oschangkai\.android\build-cache\afcacca139f92beffe219efa3df95df388c58035\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="010ee9e87a286afcaeaed368dcf829e42d0aa2a0">
+        <dex dex="D:\Homework\triptao-android\app\build\intermediates\pre-dexed\debug\classes_1753e1eaf80b1e1200a231bf4bf149c5079d4ab1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Oschangkai\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.2\f1bc476cc167b18e66c297df599b2377131a8947\gson-2.6.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f1bc476cc167b18e66c297df599b2377131a8947">
+        <dex dex="D:\Homework\triptao-android\app\build\intermediates\pre-dexed\debug\gson-2.6.2_2c0a730709f3e9b8d7fb0fc0cf596202c27cd151.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Oschangkai\.android\build-cache\a573bb263b2d020f83a7e568549d44402e5cbbba\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="060b30a619b8d3ba053e1d7dc08b3fdf0dd81530">
+        <dex dex="D:\Homework\triptao-android\app\build\intermediates\pre-dexed\debug\classes_40dcecda54939836985356861f3d4a8f3f0ce2b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Oschangkai\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\Homework\triptao-android\app\build\intermediates\pre-dexed\debug\library-2.4.0_182e36b96c69c4f127df9a144ac6038838b22a1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Oschangkai\.android\build-cache\1a2bbae094f0dd2fb633e306e9cb1f3524fba1a0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="75d15557ff7531e59b01362d46bb06dd59c5f971">
+        <dex dex="D:\Homework\triptao-android\app\build\intermediates\pre-dexed\debug\classes_34b5046798b8ef70ce87a99ca20edb18302372e0.jar" />
+    </item>
+
+</items>
