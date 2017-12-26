@@ -36,6 +36,7 @@ import java.util.Map;
 
 import tw.kaiyeee.triptao.R;
 
+import static tw.kaiyeee.triptao.R.layout.content_main;
 import static tw.kaiyeee.triptao.R.layout.list_view_layout;
 
 
@@ -63,9 +64,9 @@ public class test_json extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //new GetContacts ().execute();
-        mTabs = (TabLayout) findViewById(R.id.tabs);
-        mTabs.addTab(mTabs.newTab().setText("熱門"));
-        mTabs.addTab(mTabs.newTab().setText("精選"));
+        //mTabs = (TabLayout) findViewById(R.id.tabs);
+        //mTabs.addTab(mTabs.newTab().setText("熱門"));
+        //mTabs.addTab(mTabs.newTab().setText("精選"));
 
         String JsonString = loadJSONFromAsset();
         Gson gson = new Gson();
@@ -185,6 +186,22 @@ public class test_json extends AppCompatActivity
     public boolean onNavigationItemSelected (MenuItem item){
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+
+        switch(id) {
+            case R.id.nav_site:
+                Intent site = new Intent();
+                site.setClass(this, test_json.class);
+                startActivity(site);
+                break;
+            case R.id.nav_weather:
+                Intent weather = new Intent();
+                weather.setClass(this, weatherActivity.class);
+                startActivity(weather);
+                overridePendingTransition(R.animator.slide_to_right, R.animator.slide_from_left);
+                break;
+            default:
+                break;
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
