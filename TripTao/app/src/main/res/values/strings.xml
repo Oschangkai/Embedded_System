@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TripTaoTwo</string>
+    <string name="app_name">TripTao</string>
     <string name="tab_text_1">今日天氣</string>
     <string name="tab_text_2">景點</string>
     <string name="action_settings">Settings</string>
