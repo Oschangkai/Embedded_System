@@ -1,13 +1,8 @@
 <component name="libraryTable">
   <library name="com.thoughtbot:expandablerecyclerview-1.0">
     <CLASSES>
-<<<<<<< HEAD
-      <root url="file://$USER_HOME$/.android/build-cache/ed688f7cab985dbaca36315dabccfa9718ecc5e4/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/ed688f7cab985dbaca36315dabccfa9718ecc5e4/output/jars/classes.jar!/" />
-=======
-      <root url="file://$USER_HOME$/.android/build-cache/0dc2114638ebd6e70346f351fb28607bfee8bc20/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/0dc2114638ebd6e70346f351fb28607bfee8bc20/output/jars/classes.jar!/" />
->>>>>>> f23ce17a8e2d7a6edb2d00c40baf8a33ebfd5d6b
+      <root url="file://$USER_HOME$/.android/build-cache/8fa11e81f698ffd2f43c4196b234bf51405ed14b/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/8fa11e81f698ffd2f43c4196b234bf51405ed14b/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

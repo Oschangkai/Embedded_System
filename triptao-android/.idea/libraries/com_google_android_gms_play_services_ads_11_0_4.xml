@@ -1,13 +1,8 @@
 <component name="libraryTable">
   <library name="com.google.android.gms:play-services-ads-11.0.4">
     <CLASSES>
-<<<<<<< HEAD
-      <root url="file://$USER_HOME$/.android/build-cache/4ce41448233e029d4b22c84f4ab5182c872c4ae6/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/4ce41448233e029d4b22c84f4ab5182c872c4ae6/output/jars/classes.jar!/" />
-=======
-      <root url="file://$USER_HOME$/.android/build-cache/563287f4c77d98a17a228354192d7772899f0c28/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/563287f4c77d98a17a228354192d7772899f0c28/output/jars/classes.jar!/" />
->>>>>>> f23ce17a8e2d7a6edb2d00c40baf8a33ebfd5d6b
+      <root url="file://$USER_HOME$/.android/build-cache/85423c86926fefbe2b2c48f37b84349bcaf3002f/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/85423c86926fefbe2b2c48f37b84349bcaf3002f/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

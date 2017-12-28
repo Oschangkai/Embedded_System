@@ -1,13 +1,8 @@
 <component name="libraryTable">
   <library name="pl.droidsonroids.gif:android-gif-drawable-1.2.3">
     <CLASSES>
-<<<<<<< HEAD
-      <root url="file://$USER_HOME$/.android/build-cache/e865d14c39dbce1a8b04bce9e29b3a7c7bc2be60/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/e865d14c39dbce1a8b04bce9e29b3a7c7bc2be60/output/jars/classes.jar!/" />
-=======
-      <root url="file://$USER_HOME$/.android/build-cache/a4a64b9b23e60ecf5f891f7f0bfe0a16d948876f/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/a4a64b9b23e60ecf5f891f7f0bfe0a16d948876f/output/jars/classes.jar!/" />
->>>>>>> f23ce17a8e2d7a6edb2d00c40baf8a33ebfd5d6b
+      <root url="file://$USER_HOME$/.android/build-cache/8ca6ef01b883e09a9412b0937ad653f6c65b444c/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/8ca6ef01b883e09a9412b0937ad653f6c65b444c/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

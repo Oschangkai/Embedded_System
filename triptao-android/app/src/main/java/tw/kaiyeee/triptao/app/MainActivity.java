@@ -130,14 +130,14 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        /*DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);*/
     }
 
 
@@ -259,7 +259,7 @@ public class MainActivity extends AppCompatActivity
             final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setMessage("你確定要離開");
             builder.setCancelable(true);
-            builder.setNegativeButton("在逛一會兒", new DialogInterface.OnClickListener() {
+            builder.setNegativeButton("再逛一會兒", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int i) {
                     dialog.cancel();

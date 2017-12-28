@@ -3,417 +3,417 @@
 
     <item
         is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/c2d72a361db4f93095231fe5c31a70e809841bf0/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="34c23b5894b4f24d566bfc33e0e25462c6436b78">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_ad92fdf3387e6a530ad5e10fc9e43816b190dee5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/a26324ee07a41bfc2ed329370d78470fbaf2257d/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_5768425c6135d419fb791653863a11e5d83fb7a8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/3ae5f13934654965b67bafec6eb711cc7b01bf91/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="ee07783aa59eefdeacc107abf472f45f60272302">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_1938f14862cc0f071cd6ca7318ba6bec90605e2a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/82d5036b2e0e1f4a8334bcd94a21904d8642bde7/output/jars/classes.jar"
+        jar="C:\Users\Castie1\.android\build-cache\ba6eafaf14ee9acfaab78bc221e475fd2b560a32\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_3001238ea59405a3d5ac3f8dfad19d27ea14a69f.jar" />
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_d7b03223818b12bef25f4c372faa2e655cf0bd4b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/library-2.4.0_8ac85bf5a54343cb9c7aebf97efcc81db971667c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/google/guava/guava/18.0/guava-18.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="cce0823396aa693798f8882e64213b1772032b09">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/guava-18.0_e11ced1631feb7c9800790c98fd765d3bed1b86c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/d9c56d1f95f3bce5fe3679d88e8cd4f681e419e4/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_b26b79b165f7e81f7e9582b915b6cd3a33bf145c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.google.auto.service/auto-service/1.0-rc2/51033a5b8fcf7039159e35b6878f106ccd5fb35f/auto-service-1.0-rc2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="51033a5b8fcf7039159e35b6878f106ccd5fb35f">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/auto-service-1.0-rc2_9d23afb6ab553e51363aeab824cd57211e2926b0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.4.0_688d90ce59c5dd01fca525d061abb66d4b3c9416.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/6f9f7443bb8513152ff64dade489d550d972aae7/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="fcae52a60bc07924d370b4d376116cd8f8581f54">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_736cd37eb1f32c679a93e512e6a10322b002dd2d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/bd1d232afea4911cfa6923db62dc9c797fce337c/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_08787c8b45b18bc8ab3e3d6177a317ac37c3af69.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/gson-2.8.0_64cc10e9471794acf3accc8a081c50c0bc8dd782.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet/1.7.0/4fdcf1fc27c1a8f55d1109df986c923152f07759/javapoet-1.7.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="4fdcf1fc27c1a8f55d1109df986c923152f07759">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/javapoet-1.7.0_db963b28d07bb7ceaf5c5b3e19f39bf29c3551e0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/3866a026df4ca75b1c9d7206d4ed09160fbaab0e/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_ad313b756f2ff02f974a806e906da5098b4728e4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/740b44e503983cb8718b3afda558266caea40d25/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_1a6b7c39d6d8a6fa75fe32b260b254568693cfb1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/5ab2b2f54b35f44a5e029638ed2bbf45b4cc6169/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_6561197a3e3c2e4439f31c1307b664e9291c2f1b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/9cb026b9926e6ff4fc8177c5cc0db2656a6b48d0/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="e7f890dd2539b7f2582f450f0721e2dea6ae510c">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_3768ee001a0571c0aa18c4317210daa204ebcd37.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/f21577cd81808c1ab2183ac9933418fc5717dca6/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="010ee9e87a286afcaeaed368dcf829e42d0aa2a0">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_258ebc3bb04008ca672cd054722879536833df98.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/3a9f83de8a2228e0ccd891d8a6c3cc28115a4f98/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_4a7cff522bcf7c2eb581f2d2e1026f89b50f8059.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/glide-3.7.0_0547159f09a166716e29c49ca5148c56b573e7c3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/97e27c9be1f3d71d36fe859b293425d5fbbc336b/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_9b9261ae8d682bc6fdd9e508c87f30c575fb7a6e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/e865d14c39dbce1a8b04bce9e29b3a7c7bc2be60/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="75d15557ff7531e59b01362d46bb06dd59c5f971">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_7955db85c17afa705569ba753bace5cb2fbf3e6f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/85d476af213bf610e49898ff5d3e05c1957b66a0/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="060b30a619b8d3ba053e1d7dc08b3fdf0dd81530">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_c4a206c899f6dde1af75ff2c6e16adc7dafeefb5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/ef272885bd69e4703cca3e4171e9955a5d20e557/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_2da1bb924fa0c3c4a4f540a9ebe83fbf40d0836f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/5b39ee918ffa81d584a5127d5194e477c04cd1be/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_fa8c3af82df4d944fc3ae9da67be109ef9936da9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/5c4e37c483af80a981a12b70d7e6cd5a8d164318/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_8ded5f298effbb6fb9afac85e83ba3f1f3e9efeb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/okio-1.11.0_bc1f5c291f0e372566860796a49c08b8ea7d75b6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/de4f828ea1cb70b6bd485204c36b9a946534e01e/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_d569b60b58eca2549df4f8d85411ed1f570bae4e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/ed688f7cab985dbaca36315dabccfa9718ecc5e4/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="03918956d8b93c57537794c5893aecb53e3de7a4">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_7433f2e5d731fcd02fdc46be54237b185c1cfbef.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/7f65b31150327e7f718ba788ae8a0f9cbe459345/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_d762a5a5c3cf6aeb91de47a570277181ec52ce7b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/2709802064bd20dc15e4717d57d8d4340ed8e7b4/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_4017cde8caa86d52dd52a948f2af2a96de28060f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.google.auto/auto-common/0.6/cf7212b0f8bfef12657b942df8f4f2cf032d3f41/auto-common-0.6.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="cf7212b0f8bfef12657b942df8f4f2cf032d3f41">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/auto-common-0.6_e50c8bfe6ab5c5fb55b1ac006376d4ab04240f2b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_1176dbfdc708dc3e26227884a0f84cdf646de2f9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-compiler/8.4.0/22f40cd3f01849c6deeab0a755d2082b2624581/butterknife-compiler-8.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="022f40cd3f01849c6deeab0a755d2082b2624581">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/butterknife-compiler-8.4.0_fed9575e9a14c873484eaba09a59599625435dd8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/23275700c8a47f14b967bf58f4ebd9f50a8b3456/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_806acf0e7a0b9a3121409489426ddbde2a424285.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/b2f830b78cc3aea98165e4e06ecdd6bb34e55d0a/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_854d7c24683a4f5d24c2b45914ccba99fbef80d6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/18be2110585eb393bf6e024864cb6710fb9006cf/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="416fb9ee2fd6e7af0bba04b01d90cb475b1e2074">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_f732b83a2352991d4a5a131fc30e4744d290bff7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_b2e7dc4d731691657a4edee834ebf23226d9da74.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/9882ebd17b028a4ba1ba9136e41c4b6a5fe15828/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_28e15af2ad540fa61eed904274c802a848f99f2a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/b4be09baffc8c7acc126038d9e46a590257c2bd3/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="f229aae65e61058c88acb3ad14978b8997c77608">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_b1699d1267861c545d32771e59e1da941f044a8f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/6ff88f2863abfb13ac29ed8d037c53cd5c3bf46d/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="f2cb88e7e28736d44e7e643deb80c9af1c3662c8">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_8bb8e56e9e74676dea0cf98424f9ecc3f44c2ff1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/4ce41448233e029d4b22c84f4ab5182c872c4ae6/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="2c73e2a93e00abd240e495c1e62217e53904a3f3">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_844188efebec49790477d948201c071c1e2041e6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/KaiYi.C/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_ea857e34680cf9d1e5798061c4b228adde6fe5e8.jar" />
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_749f92721abc8a389255a48e6bc4f467c7c672e5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/3f417b705ba2215f5d746204ad7a69bd561a8dbc/output/jars/classes.jar"
+        jar="C:\Users\Castie1\.android\build-cache\a6c48ca667e5d4288737c154b907778352df8468\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_e5995a7b8bea8a0ac6285070db11d98d61819038.jar" />
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_7bc25429fd6b2f0d55ef0cb0a06117af453d7ad7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/e05a68eb15f00d391e8d9520ba7d729f7c8912d3/output/jars/classes.jar"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.squareup\javapoet\1.7.0\4fdcf1fc27c1a8f55d1109df986c923152f07759\javapoet-1.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4fdcf1fc27c1a8f55d1109df986c923152f07759">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\javapoet-1.7.0_dfc136bf2d2146bd7019a9418a40ca2108a949db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\b20e74dda9d99c4f073809dac9e4bf5368da50f3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_46659e3306f1aed548971d597e61dc8939c918b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\glide-3.7.0_54ffa10c7aff39f756ac5304e8a8f1dc9824e64f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\890b74c6fa7ec78dfe645b1f0c8f888324c7386f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f2cb88e7e28736d44e7e643deb80c9af1c3662c8">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_4fc62c000e6c7bfc057537f4215483b921bf461d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\7fa849f1cc8d982b847e6fe9ad9148aae9fae196\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f229aae65e61058c88acb3ad14978b8997c77608">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_9d4cfff56948d00c5f9ea608223af575f0de5bb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\8fa11e81f698ffd2f43c4196b234bf51405ed14b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="03918956d8b93c57537794c5893aecb53e3de7a4">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_ed59284ee8e15ea27e78484d9a122c244288dd5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\92a374a56b27c06be1790709d9490539662b2265\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_6043a59dd402aa48baf85af0cb6e514b13e94b07.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0b70b0da1435ce536e8187a25cf5733276cc35ff">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f9507c3900d1abd7ec24d229e44716299a19f1e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\a92ee24feda252cbd0fdf09baebecef8e7ac1bfe\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_f6cf54fa547a718f49da707195ec953796fb080d.jar" />
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_96600b0dbe0cd881b08e005a06b644662d70c601.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/KaiYi.C/.android/build-cache/67590da613437fdc2d5570e83ac840486ae4be8f/output/jars/classes.jar"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-compiler\8.4.0\22f40cd3f01849c6deeab0a755d2082b2624581\butterknife-compiler-8.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="022f40cd3f01849c6deeab0a755d2082b2624581">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\butterknife-compiler-8.4.0_5bc43a338e2e309d7e4c85f7ba37193a987d8c16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\f9c894154be432649f4bcf47742aedc1f9c66cdd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_0fb2e599da586747a2f7bef2c6094b641dcc5ff1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\e1602e33ac60d03f8d4a20f5399cf2936e270197\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_ebbbf7c7ca47843712db91bd0cc4e1d865676ad5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_df24b8950f73f7857c4cb4142dfc3ccd493da70b\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\10321383c5b101483759ae3997b3d33ec9dd2577\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_619d722630583d97606fb9fd07995dc7cb12ec18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.google.auto.service\auto-service\1.0-rc2\51033a5b8fcf7039159e35b6878f106ccd5fb35f\auto-service-1.0-rc2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="51033a5b8fcf7039159e35b6878f106ccd5fb35f">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\auto-service-1.0-rc2_7349a303412499600f164ee009db4c3b996960fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\9d41f3fb8264919cf90800aab7dd513b174db703\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_ef01001f49bb0a95cf476436bef6f83bd8701df0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\cf4bfae8607bbf9058a338daf722e4f3910ac096\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_eff03497191ac62a46052360e39e2568302df214.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\78dbffeeeb282532303d9eb98d378db1818a32c3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_f41a2c0bc81dea1190cebd829be6085c0e4dfabd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\8ca6ef01b883e09a9412b0937ad653f6c65b444c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="75d15557ff7531e59b01362d46bb06dd59c5f971">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_185b87514c10f3ef79bb326928e7402ae610067b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\ef836b9f6aadbb204701af6ce1538c0a2267121b\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="2430e711762a749feb00b3d64858ca4768251b9d">
-        <dex dex="/Users/KaiYi.C/Documents/Embedded_System/triptao-android/app/build/intermediates/pre-dexed/debug/classes_ba576643f6201214f5f4842b878b8a804cb4595a.jar" />
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_a737565da01683aa126b12d4fafb0e8d4eea35a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\4e1f4869b7fada2a9c7733dc8139e1e862513e6b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="010ee9e87a286afcaeaed368dcf829e42d0aa2a0">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_8776ed9882c644c26d15687541b43d320f4e8515.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\bf34b148fb75d56296f4e5605417fbc47577ea2a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_2a9f24b0b451d95308d81d3cb08307835813aab2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\c15749f6f2420e3c19986dbc7f998dbd6b61b2aa\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcae52a60bc07924d370b4d376116cd8f8581f54">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_19405733ab2035550a17653e8e4beefb97cbabce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\gson-2.8.0_eaba57d0ea2fa7a8496f56ad2001be72248fc9c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\8778b8abc14844bab2ca52f434be484c3b91392f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_15ced813c00bbe7e191c5d621560160830a27687.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\99a56c4a726b56d733f0ebcaab8cff7db93648f8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_4a813a8de7907532952df029a8618cda9c0d4d76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\01bd03006f79c58ce038eb41d4940e11b8e1efed\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="34c23b5894b4f24d566bfc33e0e25462c6436b78">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_c021f5975f85e726cd5e3439c44318af9cc3847f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\b9d7f1be427df902f1471e5ca05e17020053c0be\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="060b30a619b8d3ba053e1d7dc08b3fdf0dd81530">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_c784de1b2a041dddf3899befa3d17e1574460944.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\77e7d5f247218156dd4c90aa5c25d57eb9fb8249\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_54c3846b4479fd28a60c07ffa890df5c7c335b48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.google.auto\auto-common\0.6\cf7212b0f8bfef12657b942df8f4f2cf032d3f41\auto-common-0.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cf7212b0f8bfef12657b942df8f4f2cf032d3f41">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\auto-common-0.6_9368f0eef81a447318be81090c9a9b39ed810c89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\fed66502c3c33a865c8554747978ce0d5d8a11d7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_560fee09ac271068cd48f6040c0956cad282debf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\okio-1.11.0_f6a76a6a7d1c5fe7cc86b46b637f5963ca68b996.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\c25bc031e5159390fd4923c35fb79602d676a444\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e7f890dd2539b7f2582f450f0721e2dea6ae510c">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_5f994ab41f543fd19dd0fca9dedca406a9ec7753.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\library-2.4.0_a6754207f3602f510c96ec0ab4657fbaccaecee3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\37d134d93f9df03dd6236f2801e2f1b9f26cdfb7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_ead97b7af8b38480c2c4c4220414ad502562d49a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\7d09d0f1a4c0b5ff1a2e2d90a9d987cb78efcf5a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_a6e9cf45fd7e31fdd7a5c30435c4ed90ac7e7c44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.4.0\ea392375cf9ff59234a82e7928a204215ccc98cd\butterknife-annotations-8.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\butterknife-annotations-8.4.0_d35188a959cf604adb2f1a8b3e67ad20077f3255.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_439a3d12a1f6e99250f93929cbbbf4c6ae13cff2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\df170c5d262d7c6adce606a2e152d9b934fdfc71\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_6e646925f77caf2fad530bad7e1fd5702b5ad1d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\85423c86926fefbe2b2c48f37b84349bcaf3002f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2c73e2a93e00abd240e495c1e62217e53904a3f3">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_f1dc65e31f3014e941b753f32d553d84c36217e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\d0c6f8e1ecb749eefca44db1421102684c95dfe2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="416fb9ee2fd6e7af0bba04b01d90cb475b1e2074">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_7011f7af2d36ceda8c8eea69dbc9b3c7c479a91d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\guava\guava\18.0\guava-18.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\guava-18.0_23ae9d619c9ad952ac11ce7bff78df802e3e98c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Castie1\.android\build-cache\b41457e3cfd5622f2bd38cbed8c999e63731c570\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ee07783aa59eefdeacc107abf472f45f60272302">
+        <dex dex="C:\Users\Castie1\Desktop\Embedded_System\triptao-android\app\build\intermediates\pre-dexed\debug\classes_2d63b8a3d870fedc228bbc955ea7791ebefbe22a.jar" />
     </item>
 
 </items>
