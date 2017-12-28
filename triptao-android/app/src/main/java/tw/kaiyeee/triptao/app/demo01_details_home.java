@@ -1,6 +1,7 @@
 package tw.kaiyeee.triptao.app;
 
 import android.app.ActivityOptions;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -10,7 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONArrayRequestListener;
+import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.github.clans.fab.FloatingActionButton;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -19,10 +25,19 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -58,14 +73,14 @@ public class demo01_details_home extends AppCompatActivity {
 
 
         //再次開啟json檔案
-        String JsonString = loadJSONFromAsset();
+        final String JsonString = loadJSONFromAsset();
 
 
 
 
 
         Gson gson = new Gson();
-        Site[] mSite = gson.fromJson(loadJSONFromAsset(), Site[].class);
+        final Site[] mSite = gson.fromJson(loadJSONFromAsset(), Site[].class);
 
         //P.S.以上兩行就已經將資訊裝入People物件裡了，完成。
             //如果想要查看People物件內容，下方用Log印出資訊。
@@ -162,8 +177,66 @@ public class demo01_details_home extends AppCompatActivity {
         cd_weather.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW,Uri.parse(weather));
-                startActivity(browserIntent);
+                final AlertDialog.Builder ad = new AlertDialog.Builder(demo01_details_home.this)
+                        .setTitle("天氣資訊")
+                        .setPositiveButton("朕知道了", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        });
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'");
+                Date dateTimeNow = new Date(System.currentTimeMillis());
+                String time = formatter.format(dateTimeNow);
+
+                Calendar c = Calendar.getInstance();
+                Integer h = c.get(Calendar.HOUR_OF_DAY);
+                h = h % 3 == 0 ? h : (h - h%3);
+                time += h.toString().length() < 2 ? "0" + h.toString() : h.toString();
+                final String API = "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-005?&startTime=" + time + ":00:00&Authorization=CWB-0130401E-B5EC-461A-B588-AE3D0A070A01";
+                // data.records.locations[0]
+                // find: elementName = CI
+                // get: elementValue as Temperature, parameter[0].parameterValue as feeling
+                final ProgressDialog mProgressDialog = ProgressDialog.show(demo01_details_home.this, "", "正在連線氣象局");
+                AndroidNetworking.get(API)
+                        .build()
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+//                                // 關閉進度對話框
+                                mProgressDialog.dismiss();
+                                try {
+                                    JSONObject ja = response.getJSONObject("records")
+                                            .getJSONArray("locations").getJSONObject(0)
+                                            .getJSONArray("location").getJSONObject(0)
+                                            .getJSONArray("weatherElement").getJSONObject(6)
+                                            .getJSONArray("time").getJSONObject(0);
+                                    String weather, rainning, tempo, feeling, mos, txtBroadcast;
+                                    String[] weatherString;
+                                    weatherString = ja.getString("elementValue").split("。");
+                                    weather = weatherString[0].trim();
+                                    rainning = weatherString[1].trim();
+                                    tempo = weatherString[2].trim();
+                                    feeling = weatherString[3].trim();
+                                    mos = weatherString[5].trim();
+                                    txtBroadcast = "現在外面" + weather + "\n"
+                                            + rainning + "\n"
+                                            + tempo + "\n"
+                                            + "感覺" + feeling + "\n"
+                                            + mos;
+                                    ad.setMessage(txtBroadcast).show();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                Toast.makeText(demo01_details_home.this, "SUS", Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+                                mProgressDialog.dismiss();
+                                Toast.makeText(demo01_details_home.this, "ERR", Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
             }
 
