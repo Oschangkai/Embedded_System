@@ -1,8 +1,13 @@
 <component name="libraryTable">
   <library name="com.google.android.gms:play-services-clearcut-11.0.4">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.android/build-cache/9cb026b9926e6ff4fc8177c5cc0db2656a6b48d0/output/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.android/build-cache/9cb026b9926e6ff4fc8177c5cc0db2656a6b48d0/output/res" />
+=======
+      <root url="jar://$USER_HOME$/.android/build-cache/14658c0a243bae0b0f0a2c06a36397a6244b29bc/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/14658c0a243bae0b0f0a2c06a36397a6244b29bc/output/res" />
+>>>>>>> f23ce17a8e2d7a6edb2d00c40baf8a33ebfd5d6b
     </CLASSES>
     <JAVADOC />
     <SOURCES />

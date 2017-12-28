@@ -1,8 +1,13 @@
 <component name="libraryTable">
   <library name="com.github.clans:fab-1.6.4">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.android/build-cache/5ab2b2f54b35f44a5e029638ed2bbf45b4cc6169/output/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.android/build-cache/5ab2b2f54b35f44a5e029638ed2bbf45b4cc6169/output/res" />
+=======
+      <root url="jar://$USER_HOME$/.android/build-cache/1d04d3c8c14eb9906bc0d9ad410f93f5654c5387/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/1d04d3c8c14eb9906bc0d9ad410f93f5654c5387/output/res" />
+>>>>>>> f23ce17a8e2d7a6edb2d00c40baf8a33ebfd5d6b
     </CLASSES>
     <JAVADOC />
     <SOURCES>

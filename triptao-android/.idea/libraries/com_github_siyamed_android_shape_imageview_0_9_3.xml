@@ -1,8 +1,13 @@
 <component name="libraryTable">
   <library name="com.github.siyamed:android-shape-imageview-0.9.3">
     <CLASSES>
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.android/build-cache/3ae5f13934654965b67bafec6eb711cc7b01bf91/output/res" />
       <root url="jar://$USER_HOME$/.android/build-cache/3ae5f13934654965b67bafec6eb711cc7b01bf91/output/jars/classes.jar!/" />
+=======
+      <root url="jar://$USER_HOME$/.android/build-cache/c0b93ba1737cf2e710f26d36e8f32d38e1143099/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/c0b93ba1737cf2e710f26d36e8f32d38e1143099/output/res" />
+>>>>>>> f23ce17a8e2d7a6edb2d00c40baf8a33ebfd5d6b
     </CLASSES>
     <JAVADOC />
     <SOURCES>
